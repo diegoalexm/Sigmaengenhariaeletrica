@@ -2,29 +2,32 @@
 <html lang="pt-br">
 <head>
   <meta charset="UTF-8">
+
+  <!-- Responsividade -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <title>Bella e Dellicada</title>
 
-  <!-- Google Tag Manager -->
+  <!-- ================= GOOGLE TAG MANAGER ================= -->
   <script>
     (function(w,d,s,l,i){
       w[l]=w[l]||[];
       w[l].push({'gtm.start': new Date().getTime(),event:'gtm.js'});
       var f=d.getElementsByTagName(s)[0],
-          j=d.createElement(s),
-          dl=l!='dataLayer'?'&l='+l:'';
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';
       j.async=true;
       j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;
       f.parentNode.insertBefore(j,f);
     })(window,document,'script','dataLayer','GTM-WT4MG45L');
   </script>
-  <!-- End Google Tag Manager -->
+  <!-- ====================================================== -->
 
-  <!-- CSS -->
+  <!-- CSS principal -->
   <link rel="stylesheet" href="css/style.css">
 
-  <!-- Icons -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-b2j2DHTw7o6RqQ5E35+htmx+6Zz5ZJ6Gz1IkfW4iDfSvxQf2e0oTJlN/3y4rWnYIqUEf8PukqImJH+JgCkMH8g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <!-- Font Awesome (ÍCONES FUNCIONAIS) -->
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 
 <body>
@@ -32,61 +35,70 @@
 <!-- Google Tag Manager (noscript) -->
 <noscript>
   <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WT4MG45L"
-          height="0" width="0" style="display:none;visibility:hidden"></iframe>
+  height="0" width="0" style="display:none;visibility:hidden"></iframe>
 </noscript>
-<!-- End Google Tag Manager (noscript) -->
 
-<!-- Cabeçalho -->
+<!-- ================= HEADER ================= -->
 <header>
+  <!-- Logo -->
   <img src="img/logo.png" alt="Bella e Dellicada" class="logo">
-  <h1>Descubra o melhor para você com carinho e estilo</h1>
+
+  <!-- Frase institucional -->
+  <h1>Produtos selecionados com carinho para você</h1>
 </header>
+<!-- ========================================== -->
 
-<!-- Campo de pesquisa -->
-<div class="search-container">
-  <input type="text" id="search" placeholder="Pesquisar produtos...">
-</div>
-
-<!-- Categorias -->
-<section id="saude-bem-estar" class="category-section"></section>
-<section id="perfumes-divinos" class="category-section"></section>
-<section id="skincare-maravilhosos" class="category-section"></section>
-<section id="super-techs" class="category-section"></section>
-
-<!-- Descobertas Deslumbrantes -->
-<section id="descobertas" class="highlight-section"></section>
-
-<!-- Formulário de contato / newsletter -->
-<section class="newsletter">
-  <h2>Receba novidades e ofertas</h2>
-  <input type="email" placeholder="Seu email">
-  <input type="text" placeholder="Seu WhatsApp">
-  <button>Enviar</button>
+<!-- ================= BUSCA ================= -->
+<section class="search-container">
+  <input type="text" id="searchInput" placeholder="Buscar produtos...">
 </section>
+<!-- ========================================= -->
 
-<!-- Banner de cookies -->
-<div class="cookies-banner">
-  <p>Usamos cookies para melhorar sua experiência. Ao continuar navegando, você aceita nossa política de privacidade.</p>
-  <button id="accept-cookies">Aceitar</button>
-</div>
+<!-- ================= CATEGORIAS ================= -->
+<!-- OBS: São preenchidas automaticamente pelo main.js -->
+<section id="saude-bem-estar" class="category"></section>
+<section id="perfumes-divinos" class="category"></section>
+<section id="skincare-maravilhosos" class="category"></section>
+<section id="super-techs" class="category"></section>
+<!-- =============================================== -->
 
-<!-- Rodapé -->
+<!-- ================= LEADS ================= -->
+<section class="lead-section">
+  <h2>Receba ofertas exclusivas</h2>
+
+  <!-- Apenas email OU WhatsApp -->
+  <form id="leadForm">
+    <input type="email" id="email" placeholder="Seu email">
+    <input type="text" id="whatsapp" placeholder="Seu WhatsApp">
+    <button type="submit">Quero receber</button>
+  </form>
+</section>
+<!-- ======================================== -->
+
+<!-- ================= FOOTER ================= -->
 <footer>
-  <p>&copy; 2026 Bella e Dellicada</p>
-  <p>Email: <a href="mailto:bellaedellicada@gmail.com">bellaedellicada@gmail.com</a></p>
-  <div class="social">
-    <a href="https://instagram.com/bellaeellicada" target="_blank"><i class="fab fa-instagram"></i></a>
-    <a href="https://tiktok.com/@bellaeellicada_" target="_blank"><i class="fab fa-tiktok"></i></a>
+  <p>© 2026 Bella e Dellicada</p>
+
+  <!-- Redes sociais (ÍCONES) -->
+  <div class="social-icons">
+    <a href="https://instagram.com/" target="_blank">
+      <i class="fa-brands fa-instagram"></i>
+    </a>
+
+    <a href="https://tiktok.com/" target="_blank">
+      <i class="fa-brands fa-tiktok"></i>
+    </a>
   </div>
 </footer>
+<!-- ========================================= -->
 
-<!-- WhatsApp flutuante -->
-<a href="https://wa.me/5554999877518" class="whatsapp-float" target="_blank">
-  <i class="fab fa-whatsapp"></i>
+<!-- ================= WHATSAPP FLUTUANTE ================= -->
+<a href="https://wa.me/5554999877518" target="_blank" class="whatsapp-float">
+  <i class="fa-brands fa-whatsapp"></i>
 </a>
+<!-- ===================================================== -->
 
-<!-- JS -->
+<!-- Script principal -->
 <script src="js/main.js"></script>
-
 </body>
 </html>
