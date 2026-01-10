@@ -2,8 +2,8 @@
 <html lang="pt-br">
 <head>
   <meta charset="UTF-8">
-  <title>Bella e Dellicada</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bella e Dellicada</title>
 
   <!-- Google Tag Manager -->
   <script>
@@ -11,78 +11,111 @@
       w[l]=w[l]||[];
       w[l].push({'gtm.start': new Date().getTime(),event:'gtm.js'});
       var f=d.getElementsByTagName(s)[0],
-          j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';
+          j=d.createElement(s),
+          dl=l!='dataLayer'?'&l='+l:'';
       j.async=true;
       j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;
       f.parentNode.insertBefore(j,f);
     })(window,document,'script','dataLayer','GTM-WT4MG45L');
   </script>
+  <!-- End Google Tag Manager -->
 
+  <!-- Fontes -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&family=Playfair+Display:wght@500&display=swap" rel="stylesheet">
+
+  <!-- Ícones -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <!-- CSS -->
   <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
 
+<!-- Google Tag Manager (noscript) -->
 <noscript>
   <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WT4MG45L"
   height="0" width="0" style="display:none;visibility:hidden"></iframe>
 </noscript>
+<!-- End Google Tag Manager (noscript) -->
 
+<!-- HEADER -->
 <header class="header">
-  <img src="img/logo.png" class="logo" alt="Bella e Dellicada">
-  <p class="slogan">Escolhas que encantam ✨</p>
+  <img src="img/logo.png" alt="Bella e Dellicada" class="logo">
+
+  <h1 class="hero-text">Produtos escolhidos com delicadeza</h1>
+
+  <!-- MENU INSTITUCIONAL -->
+  <nav class="main-nav">
+    <a href="page/about.html">Quem somos</a>
+    <a href="page/contact.html">Central de atendimento</a>
+    <a href="page/payment.html">Formas de pagamento</a>
+    <a href="page/shipping.html">Frete e entrega</a>
+  </nav>
 </header>
 
-<nav class="categories">
-  <a href="#saude-bem-estar">Saúde & Bem-estar</a>
-  <a href="#perfumes-divinos">Perfumes Divinos</a>
-  <a href="#skincare-maravilhosos">Skincare Maravilhosos</a>
-  <a href="#super-techs">Super Techs</a>
-</nav>
-
-<section id="featured">
-  <h2 class="featured-title">Descobertas Deslumbrantes</h2>
-  <div class="products" id="featured-products"></div>
+<!-- DESTAQUES -->
+<section id="featured" class="featured-section">
+  <h2>✨ Descobertas Deslumbrantes</h2>
+  <div class="products-grid" id="featured-products"></div>
 </section>
 
-<section id="saude-bem-estar" class="category-section">
-  <h2>Saúde & Bem-estar</h2>
-  <div class="products"></div>
+<!-- CATEGORIAS -->
+<section id="categories">
+
+  <h2 id="saude">Saúde & Bem-estar</h2>
+  <div class="products-grid" id="saude-bem-estar"></div>
+
+  <h2 id="perfumes">Perfumes Divinos</h2>
+  <div class="products-grid" id="perfumes-divinos"></div>
+
+  <h2 id="skincare">Skincare Maravilhosos</h2>
+  <div class="products-grid" id="skincare-maravilhosos"></div>
+
+  <h2 id="tech">Super Techs</h2>
+  <div class="products-grid" id="super-techs"></div>
+
 </section>
 
-<section id="perfumes-divinos" class="category-section">
-  <h2>Perfumes Divinos</h2>
-  <div class="products"></div>
+<!-- NEWSLETTER -->
+<section class="newsletter">
+  <h2>Receba novidades e ofertas</h2>
+
+  <!-- FORM GOOGLE -->
+  <form action="https://docs.google.com/forms/d/e/FORM_ID/formResponse" method="POST" target="_blank">
+    <input type="email" name="entry.AA" placeholder="Seu email">
+    <input type="text" name="entry.AB" placeholder="Seu WhatsApp">
+    <button type="submit">Enviar</button>
+  </form>
 </section>
 
-<section id="skincare-maravilhosos" class="category-section">
-  <h2>Skincare Maravilhosos</h2>
-  <div class="products"></div>
-</section>
+<!-- BOTÃO WHATSAPP FLUTUANTE -->
+<a href="https://wa.me/5554999877518" class="whatsapp-float" target="_blank">
+  <i class="fa-brands fa-whatsapp"></i>
+</a>
 
-<section id="super-techs" class="category-section">
-  <h2>Super Techs</h2>
-  <div class="products"></div>
-</section>
-
+<!-- FOOTER -->
 <footer>
-  <p>© 2026 Bella e Dellicada</p>
+  <div class="footer-links">
+    <a href="page/about.html">Quem somos</a>
+    <a href="page/privacy.html">Política de privacidade</a>
+    <a href="page/returns.html">Trocas e devoluções</a>
+    <a href="page/shipping.html">Frete e entrega</a>
+    <a href="page/payment.html">Formas de pagamento</a>
+  </div>
+
+  <p>&copy; 2026 Bella e Dellicada</p>
+  <p>Email: bellaedellicada@gmail.com</p>
 
   <div class="social">
-    <a href="https://instagram.com/" target="_blank">
-      <img src="img/icons/instagram.png">
+    <a href="https://instagram.com/bellaedellicada" target="_blank">
+      <i class="fa-brands fa-instagram"></i>
     </a>
-    <a href="https://tiktok.com/" target="_blank">
-      <img src="img/icons/tiktok.png">
+    <a href="https://tiktok.com/@bellaedellicada_" target="_blank">
+      <i class="fa-brands fa-tiktok"></i>
     </a>
   </div>
 </footer>
-
-<!-- WhatsApp flutuante -->
-<a class="whatsapp-float" 
-   href="https://wa.me/5554999877518" 
-   target="_blank">
-  <img src="img/icons/whatsapp.png">
-</a>
 
 <script src="js/main.js"></script>
 </body>

@@ -1,36 +1,22 @@
 {
   "products": [
     {
-      "id": "monj01",
-      "name": "Monja Detox Premium",
+      "id": "monjarim",
+      "name": "Monjarim",
       "category": "saude-bem-estar",
-      "image": "img/products/saude-bem-estar/Monj01.jpg",
-      "link": "https://braip.com/produto1",
-      "featured": true
-    },
-    {
-      "id": "perf01",
-      "name": "Perfume Divino Luxo",
-      "category": "perfumes-divinos",
-      "image": "img/products/perfumes-divinos/Perf01.jpg",
-      "link": "https://mercadolivre.com/produto1",
-      "featured": true
-    },
-    {
-      "id": "skin01",
-      "name": "Sérum Iluminador",
-      "category": "skincare-maravilhosos",
-      "image": "img/products/skincare-maravilhosos/Skin01.jpg",
-      "link": "https://mercadolivre.com/produto2",
-      "featured": true
-    },
-    {
-      "id": "ps501",
-      "name": "PlayStation 5",
-      "category": "super-techs",
-      "image": "img/products/super-techs/PS501.jpg",
-      "link": "https://mercadolivre.com/produto3",
-      "featured": false
+      "highlight": true,
+      "images": [
+        "img/saude-bem-estar/Monj01.jpg",
+        "img/saude-bem-estar/Monj02.jpg",
+        "img/saude-bem-estar/Monj03.jpg",
+        "img/saude-bem-estar/Monj04.jpg"
+      ],
+      "treatments": [
+        { "label": "1 mês", "link": "https://ev.braip.com/ref?pl=pla1qrk8&ck=chew4mj1&af=afi6595eep" },
+        { "label": "3 meses", "link": "https://ev.braip.com/ref?pl=plarzq9w&ck=chew4mj1&af=afi6595eep" },
+        { "label": "5 meses", "link": "https://ev.braip.com/ref?pl=plaooq9j&ck=chew4mj1&af=afi6595eep" },
+        { "label": "10 meses", "link": "https://ev.braip.com/ref?pl=plak8rl2&ck=chew4mj1&af=afi6595eep" }
+      ]
     }
   ]
 }
