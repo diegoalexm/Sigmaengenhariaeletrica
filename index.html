@@ -24,10 +24,6 @@
 
   <!-- CSS principal -->
   <link rel="stylesheet" href="css/style.css">
-
-  <!-- Font Awesome (ÍCONES FUNCIONAIS) -->
-  <link rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 
 <body>
@@ -39,66 +35,64 @@
 </noscript>
 
 <!-- ================= HEADER ================= -->
-<header>
-  <!-- Logo -->
+<header class="header">
   <img src="img/logo.png" alt="Bella e Dellicada" class="logo">
-
-  <!-- Frase institucional -->
   <h1>Produtos selecionados com carinho para você</h1>
 </header>
-<!-- ========================================== -->
+
+<!-- ================= MENU DE CATEGORIAS ================= -->
+<nav class="category-menu">
+  <a href="#saude-bem-estar">Saúde & Bem-estar</a>
+  <a href="#perfumes-divinos">Perfumes Divinos</a>
+  <a href="#skincare-maravilhosos">Skincare</a>
+  <a href="#super-techs">Super Techs</a>
+</nav>
 
 <!-- ================= BUSCA ================= -->
-<section class="search-container">
+<div class="search-container">
   <input type="text" id="searchInput" placeholder="Buscar produtos...">
-</section>
-<!-- ========================================= -->
+</div>
 
 <!-- ================= CATEGORIAS ================= -->
-<!-- OBS: São preenchidas automaticamente pelo main.js -->
 <section id="saude-bem-estar" class="category"></section>
 <section id="perfumes-divinos" class="category"></section>
 <section id="skincare-maravilhosos" class="category"></section>
 <section id="super-techs" class="category"></section>
-<!-- =============================================== -->
 
 <!-- ================= LEADS ================= -->
-<section class="lead-section">
+<section class="newsletter">
   <h2>Receba ofertas exclusivas</h2>
 
-  <!-- Apenas email OU WhatsApp -->
   <form id="leadForm">
-    <input type="email" id="email" placeholder="Seu email">
-    <input type="text" id="whatsapp" placeholder="Seu WhatsApp">
+    <input type="email" id="leadEmail" placeholder="Seu email">
+    <input type="text" id="leadWhatsapp" placeholder="Seu WhatsApp">
     <button type="submit">Quero receber</button>
   </form>
 </section>
-<!-- ======================================== -->
 
 <!-- ================= FOOTER ================= -->
 <footer>
   <p>© 2026 Bella e Dellicada</p>
+  <p>Email: bellaedellicada@gmail.com</p>
 
-  <!-- Redes sociais (ÍCONES) -->
   <div class="social-icons">
-    <a href="https://instagram.com/" target="_blank">
-      <i class="fa-brands fa-instagram"></i>
+    <a href="https://instagram.com/bellaeellicada" target="_blank">
+      <img src="img/icons/instagram.svg" alt="Instagram">
     </a>
 
-    <a href="https://tiktok.com/" target="_blank">
-      <i class="fa-brands fa-tiktok"></i>
+    <a href="https://tiktok.com/@bellaeellicada_" target="_blank">
+      <img src="img/icons/tiktok.svg" alt="TikTok">
     </a>
   </div>
 </footer>
-<!-- ========================================= -->
 
 <!-- ================= WHATSAPP FLUTUANTE ================= -->
-<a href="https://wa.me/5554999877518" target="_blank" class="whatsapp-float">
-  <i class="fa-brands fa-whatsapp"></i>
+<a href="https://wa.me/5554999877518" class="whatsapp-float" target="_blank">
+  <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png">
 </a>
-<!-- ===================================================== -->
 
-<!-- Script principal -->
+<!-- ================= JS ================= -->
 <script src="js/main.js"></script>
+
 </body>
 </html>
