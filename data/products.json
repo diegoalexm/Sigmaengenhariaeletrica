@@ -1,6 +1,6 @@
 {
   "categories": [
-    { "id": "saude-bem-estar", "name": "Saúde e Bem-Estar" },
+    { "id": "saude-bem-estar", "name": "Saúde & Bem-estar" },
     { "id": "perfumes-divinos", "name": "Perfumes Divinos" },
     { "id": "skincare-maravilhosos", "name": "Skincare Maravilhosos" },
     { "id": "super-techs", "name": "Super Techs" }
@@ -10,26 +10,45 @@
     {
       "name": "Monjarim",
       "category": "saude-bem-estar",
-      "image": "img/saude-bem-estar/Monj01.jpg",
-      "link": "https://ev.braip.com/ref?pl=pla1qrk8"
+      "images": [
+        "img/saude-bem-estar/Monj01.jpg"
+      ],
+      "links": [
+        { "label": "1 mês", "url": "https://ev.braip.com/ref?pl=pla1qrk8&ck=chew4mj1&af=afi6595eep" }
+      ]
     },
+
     {
-      "name": "Perfume Lancôme",
+      "name": "La Vie Est Belle Rosa",
       "category": "perfumes-divinos",
-      "image": "img/perfumes-divinos/Perf01.jpg",
-      "link": "https://mercadolivre.com/sec/1hLXCcJ"
+      "images": [
+        "img/perfumes-divinos/Per01.jpg"
+      ],
+      "links": [
+        { "label": "Comprar", "url": "https://mercadolivre.com/sec/1hLXCcJ" }
+      ]
     },
+
     {
-      "name": "Creme Lancôme",
+      "name": "Creme Lancôme Night",
       "category": "skincare-maravilhosos",
-      "image": "img/skincare-maravilhosos/Skin01.jpg",
-      "link": "https://mercadolivre.com/sec/2LMw37W"
+      "images": [
+        "img/skincare-maravilhosos/Ski01.jpg"
+      ],
+      "links": [
+        { "label": "Comprar", "url": "https://mercadolivre.com/sec/2LMw37W" }
+      ]
     },
+
     {
-      "name": "Playstation 5",
+      "name": "Playstation 5 Slim",
       "category": "super-techs",
-      "image": "img/super-techs/PS501.jpg",
-      "link": "https://mercadolivre.com/sec/11gJfgD"
+      "images": [
+        "img/super-techs/PS501.jpg"
+      ],
+      "links": [
+        { "label": "Comprar", "url": "https://mercadolivre.com/sec/11gJfgD" }
+      ]
     }
   ]
 }
