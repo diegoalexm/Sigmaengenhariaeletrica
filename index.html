@@ -4,10 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Bella e Dellicada</title>
-
-  <!-- CSS -->
   <link rel="stylesheet" href="css/style.css">
-
   <!-- Google Tag Manager -->
   <script>
     (function(w,d,s,l,i){
@@ -24,129 +21,50 @@
 </head>
 <body>
 
-  <!-- Google Tag Manager (noscript) -->
-  <noscript>
-    <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WT4MG45L"
-      height="0" width="0" style="display:none;visibility:hidden"></iframe>
-  </noscript>
+<noscript>
+  <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WT4MG45L" height="0" width="0" style="display:none;visibility:hidden"></iframe>
+</noscript>
 
-  <!-- Header -->
-  <header class="site-header" style="display:flex; align-items:center; justify-content:space-between; padding:20px;">
-    <div class="logo">
-      <img src="img/logo.png" alt="Bella e Dellicada" width="150">
-    </div>
-    <h1 style="text-align:center; flex-grow:1; color:#b85ca3; font-size:28px;">
-      Descubra o melhor para você, com carinho e segurança 💖
-    </h1>
-  </header>
-
-  <!-- Categorias -->
-  <section class="categories" style="display:flex; justify-content:center; gap:20px; padding:30px;">
-    <a href="#saude" class="category-link">Saúde e bem-estar</a>
-    <a href="#perfumes" class="category-link">Perfumes Divinos</a>
-    <a href="#skincare" class="category-link">Skincare Maravilhosos</a>
-    <a href="#supertech" class="category-link">Super Techs</a>
-  </section>
-
-  <!-- Descobertas Deslumbrantes -->
-  <section class="discoveries" style="padding:20px;">
-    <h2 style="text-align:center; color:#b85ca3; margin-bottom:20px;">Descobertas Deslumbrantes</h2>
-    <div id="product-carousel-home" class="product-carousel" style="justify-content:center;">
-      <!-- Produtos carregados dinamicamente via main.js -->
-    </div>
-  </section>
-
-  <!-- Captura de WhatsApp / E-mail -->
-  <section class="contact-capture" style="margin-top:50px;">
-    <h2>Receba novidades e ofertas exclusivas</h2>
-    <p>Digite seu WhatsApp ou e-mail e fique por dentro das nossas promoções!</p>
-    <form id="contact-form">
-      <input type="text" name="contact" id="contact-input" placeholder="WhatsApp ou E-mail" required>
-      <button type="submit">Cadastrar</button>
-    </form>
-    <p id="form-message" style="margin-top:10px; color:green;"></p>
-  </section>
-
-  <!-- Footer -->
-  <footer class="site-footer" style="text-align:center; padding:20px; margin-top:40px;">
-    <p>© Bella e Dellicada — Todos os direitos reservados</p>
-    <p>Contato: <a href="mailto:bellaedellicada@gmail.com">bellaedellicada@gmail.com</a></p>
-    <p>Siga-nos: 
-      <a href="https://instagram.com/bellaeellicada" target="_blank">Instagram</a> | 
-      <a href="https://www.tiktok.com/@bellaeellicada_" target="_blank">TikTok</a>
-    </p>
-  </footer>
-
-  <!-- Banner de Cookies -->
-  <div id="cookie-banner" style="
-      position: fixed;
-      bottom: 0;
-      left: 0;
-      right: 0;
-      background-color: #fde8f2;
-      color: #333;
-      padding: 15px 20px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      box-shadow: 0 -2px 8px rgba(0,0,0,0.1);
-      z-index: 9999;
-  ">
-    <span>Este site usa cookies para melhorar sua experiência. Ao continuar navegando, você aceita nossa <a href='#' style='color:#b85ca3; text-decoration:underline;'>Política de Privacidade</a>.</span>
-    <button id="cookie-accept" style="
-        background-color: #b85ca3;
-        color: #fff;
-        border: none;
-        padding: 10px 20px;
-        border-radius: 8px;
-        cursor: pointer;
-        font-weight: bold;
-    ">Aceitar</button>
+<header>
+  <div class="logo">
+    <img src="img/logo.png" alt="Bella e Dellicada">
   </div>
+  <h1 class="brand-slogan">Produtos selecionados com carinho para você</h1>
+  <nav>
+    <a href="#saude-bem-estar">Saúde e Bem-Estar</a>
+    <a href="#perfumes-divinos">Perfumes Divinos</a>
+    <a href="#skincare-maravilhosos">Skincare Maravilhosos</a>
+    <a href="#super-techs">Super Techs</a>
+  </nav>
+</header>
 
-  <!-- Scripts -->
-  <script src="js/main.js"></script>
-  <script>
-    // ============================
-    // Captura de WhatsApp / E-mail
-    // ============================
-    const contactForm = document.getElementById('contact-form');
-    const contactInput = document.getElementById('contact-input');
-    const formMessage = document.getElementById('form-message');
+<main>
+  <!-- Seções de categoria -->
+  <section id="saude-bem-estar">
+    <h2>Saúde e Bem-Estar</h2>
+    <div class="product-carousel" id="carousel-saude-bem-estar"></div>
+  </section>
 
-    contactForm.addEventListener('submit', function(e) {
-      e.preventDefault();
+  <section id="perfumes-divinos">
+    <h2>Perfumes Divinos</h2>
+    <div class="product-carousel" id="carousel-perfumes-divinos"></div>
+  </section>
 
-      const contactValue = contactInput.value.trim();
+  <section id="skincare-maravilhosos">
+    <h2>Skincare Maravilhosos</h2>
+    <div class="product-carousel" id="carousel-skincare-maravilhosos"></div>
+  </section>
 
-      if(contactValue === '') {
-        formMessage.textContent = 'Por favor, insira seu WhatsApp ou E-mail.';
-        formMessage.style.color = 'red';
-        return;
-      }
+  <section id="super-techs">
+    <h2>Super Techs</h2>
+    <div class="product-carousel" id="carousel-super-techs"></div>
+  </section>
+</main>
 
-      console.log('Contato cadastrado:', contactValue);
-      formMessage.textContent = 'Obrigado! Você foi cadastrado com sucesso.';
-      formMessage.style.color = 'green';
+<footer>
+  <p>Contato: <a href="mailto:bellaedellicada@gmail.com">bellaedellicada@gmail.com</a></p>
+</footer>
 
-      contactInput.value = '';
-    });
-
-    // ============================
-    // Banner de Cookies
-    // ============================
-    const cookieBanner = document.getElementById('cookie-banner');
-    const cookieAccept = document.getElementById('cookie-accept');
-
-    if(localStorage.getItem('cookiesAccepted')) {
-      cookieBanner.style.display = 'none';
-    }
-
-    cookieAccept.addEventListener('click', function() {
-      localStorage.setItem('cookiesAccepted', 'true');
-      cookieBanner.style.display = 'none';
-    });
-  </script>
-
+<script src="js/main.js"></script>
 </body>
 </html>
