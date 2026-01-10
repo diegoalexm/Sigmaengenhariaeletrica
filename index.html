@@ -2,97 +2,88 @@
 <html lang="pt-br">
 <head>
   <meta charset="UTF-8">
-
-  <!-- Responsividade -->
+  <title>Bella e Dellicada</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Bella e Dellicada</title>
-
-  <!-- ================= GOOGLE TAG MANAGER ================= -->
+  <!-- Google Tag Manager -->
   <script>
     (function(w,d,s,l,i){
       w[l]=w[l]||[];
       w[l].push({'gtm.start': new Date().getTime(),event:'gtm.js'});
       var f=d.getElementsByTagName(s)[0],
-      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';
+          j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';
       j.async=true;
       j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;
       f.parentNode.insertBefore(j,f);
     })(window,document,'script','dataLayer','GTM-WT4MG45L');
   </script>
-  <!-- ====================================================== -->
 
-  <!-- CSS principal -->
   <link rel="stylesheet" href="css/style.css">
 </head>
-
 <body>
 
-<!-- Google Tag Manager (noscript) -->
 <noscript>
   <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WT4MG45L"
   height="0" width="0" style="display:none;visibility:hidden"></iframe>
 </noscript>
 
-<!-- ================= HEADER ================= -->
 <header class="header">
-  <img src="img/logo.png" alt="Bella e Dellicada" class="logo">
-  <h1>Produtos selecionados com carinho para você</h1>
+  <img src="img/logo.png" class="logo" alt="Bella e Dellicada">
+  <p class="slogan">Escolhas que encantam ✨</p>
 </header>
 
-<!-- ================= MENU DE CATEGORIAS ================= -->
-<nav class="category-menu">
+<nav class="categories">
   <a href="#saude-bem-estar">Saúde & Bem-estar</a>
   <a href="#perfumes-divinos">Perfumes Divinos</a>
-  <a href="#skincare-maravilhosos">Skincare</a>
+  <a href="#skincare-maravilhosos">Skincare Maravilhosos</a>
   <a href="#super-techs">Super Techs</a>
 </nav>
 
-<!-- ================= BUSCA ================= -->
-<div class="search-container">
-  <input type="text" id="searchInput" placeholder="Buscar produtos...">
-</div>
-
-<!-- ================= CATEGORIAS ================= -->
-<section id="saude-bem-estar" class="category"></section>
-<section id="perfumes-divinos" class="category"></section>
-<section id="skincare-maravilhosos" class="category"></section>
-<section id="super-techs" class="category"></section>
-
-<!-- ================= LEADS ================= -->
-<section class="newsletter">
-  <h2>Receba ofertas exclusivas</h2>
-
-  <form id="leadForm">
-    <input type="email" id="leadEmail" placeholder="Seu email">
-    <input type="text" id="leadWhatsapp" placeholder="Seu WhatsApp">
-    <button type="submit">Quero receber</button>
-  </form>
+<section id="featured">
+  <h2 class="featured-title">Descobertas Deslumbrantes</h2>
+  <div class="products" id="featured-products"></div>
 </section>
 
-<!-- ================= FOOTER ================= -->
+<section id="saude-bem-estar" class="category-section">
+  <h2>Saúde & Bem-estar</h2>
+  <div class="products"></div>
+</section>
+
+<section id="perfumes-divinos" class="category-section">
+  <h2>Perfumes Divinos</h2>
+  <div class="products"></div>
+</section>
+
+<section id="skincare-maravilhosos" class="category-section">
+  <h2>Skincare Maravilhosos</h2>
+  <div class="products"></div>
+</section>
+
+<section id="super-techs" class="category-section">
+  <h2>Super Techs</h2>
+  <div class="products"></div>
+</section>
+
 <footer>
   <p>© 2026 Bella e Dellicada</p>
-  <p>Email: bellaedellicada@gmail.com</p>
 
-  <div class="social-icons">
-    <a href="https://instagram.com/bellaeellicada" target="_blank">
-      <img src="img/icons/instagram.svg" alt="Instagram">
+  <div class="social">
+    <a href="https://instagram.com/" target="_blank">
+      <img src="img/icons/instagram.png">
     </a>
-
-    <a href="https://tiktok.com/@bellaeellicada_" target="_blank">
-      <img src="img/icons/tiktok.svg" alt="TikTok">
+    <a href="https://tiktok.com/" target="_blank">
+      <img src="img/icons/tiktok.png">
     </a>
   </div>
 </footer>
 
-<!-- ================= WHATSAPP FLUTUANTE ================= -->
-<a href="https://wa.me/5554999877518" class="whatsapp-float" target="_blank">
-  <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png">
+<!-- WhatsApp flutuante -->
+<a class="whatsapp-float" 
+   href="https://wa.me/5554999877518" 
+   target="_blank">
+  <img src="img/icons/whatsapp.png">
 </a>
 
-<!-- ================= JS ================= -->
 <script src="js/main.js"></script>
-
 </body>
 </html>
