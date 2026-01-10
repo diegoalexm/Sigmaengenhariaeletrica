@@ -1,22 +1,21 @@
 // main.js - Script principal do site
-// Responsável por carregar produtos do JSON, carrossel, cookies e newsletter
+// Carrega produtos do JSON, carrossel, cookies e newsletter
 
-// Variáveis globais
-let productsData = []; // Array para armazenar produtos
-let categoriesData = []; // Array para categorias
+let productsData = [];
+let categoriesData = [];
 
 // Carregar JSON de produtos
 fetch('products.json')
-  .then(response => response.json())
+  .then(res => res.json())
   .then(data => {
     productsData = data.products;
     categoriesData = data.categories;
-    renderCategories(); // Renderiza as seções de cada categoria
-    renderHighlights(); // Renderiza Descobertas Deslumbrantes
+    renderCategories();
+    renderHighlights();
   })
-  .catch(error => console.error('Erro ao carregar JSON:', error));
+  .catch(err => console.error('Erro ao carregar JSON:', err));
 
-// Renderizar categorias
+// Renderiza categorias
 function renderCategories() {
   categoriesData.forEach(cat => {
     const section = document.getElementById(cat.id);
@@ -39,7 +38,7 @@ function renderCategories() {
   });
 }
 
-// Renderiza produtos em destaque
+// Renderiza Descobertas Deslumbrantes
 function renderHighlights() {
   const section = document.getElementById('descobertas');
   if(section) {
