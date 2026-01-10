@@ -1,65 +1,127 @@
-/* style.css - Estilos principais */
-
-/* Reset básico */
-body, h1, h2, h3, p, ul, li {
+/* ================= RESET BÁSICO ================= */
+* {
   margin: 0;
   padding: 0;
-  font-family: 'Arial', sans-serif;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
 }
-body { background-color: #fff; color: #333; }
 
-/* Cabeçalho */
+/* ================= BODY ================= */
+body {
+  background: #ffffff;
+  color: #333;
+}
+
+/* ================= HEADER ================= */
 header {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 20px;
-  background: #fbe9e7;
+  text-align: center;
+  padding: 25px;
+  background: #f8f2ef;
 }
-header .logo { width: 150px; margin-bottom: 10px; }
-header h1 { color: #b56576; text-align: center; }
 
-/* Pesquisa */
-.search-container { text-align: center; margin: 20px; }
-.search-container input { width: 60%; padding: 10px; border-radius: 5px; border: 1px solid #ccc; }
+.logo {
+  max-width: 200px;
+  margin-bottom: 10px;
+}
 
-/* Categorias e destaque */
-.category-section, .highlight-section { padding: 30px; background: #fff5f0; margin-bottom: 20px; }
-.category-section h2, .highlight-section h2 { color: #b56576; margin-bottom: 10px; }
-.product-carousel { display: flex; gap: 15px; overflow-x: auto; }
-.product-card { background: #fff; border-radius: 10px; padding: 15px; min-width: 250px; text-align: center; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
-.product-card img { width: 100%; border-radius: 10px; }
-.product-card h3 { margin: 10px 0; color: #b56576; }
-.product-card p { font-size: 14px; margin-bottom: 10px; }
-.product-card a { display: inline-block; padding: 8px 15px; background: #f7c8b8; color: #fff; border-radius: 5px; text-decoration: none; }
+header h1 {
+  font-size: 1.4rem;
+  color: #b38f7d;
+}
 
-/* Newsletter */
-.newsletter { padding: 30px; background: #fbe9e7; text-align: center; }
-.newsletter input { margin: 5px; padding: 10px; border-radius: 5px; border: 1px solid #ccc; }
-.newsletter button { padding: 10px 20px; background: #b56576; color: #fff; border: none; border-radius: 5px; cursor: pointer; }
+/* ================= BUSCA ================= */
+.search-container {
+  text-align: center;
+  margin: 20px;
+}
 
-/* Cookies */
-.cookies-banner { position: fixed; bottom: 0; width: 100%; background: #f7c8b8; color: #fff; text-align: center; padding: 10px; }
-.cookies-banner button { margin-left: 10px; padding: 5px 10px; background: #b56576; border: none; color: #fff; border-radius: 3px; cursor: pointer; }
+.search-container input {
+  width: 80%;
+  padding: 12px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
 
-/* Rodapé */
-footer { background: #fbe9e7; padding: 20px; text-align: center; }
-footer .social a { margin: 0 5px; color: #b56576; font-size: 24px; text-decoration: none; }
+/* ================= CATEGORIAS ================= */
+.category {
+  padding: 20px;
+}
 
-/* WhatsApp flutuante */
+.category h2 {
+  color: #b38f7d;
+  margin-bottom: 15px;
+}
+
+/* ================= PRODUTO ================= */
+.product-card {
+  display: inline-block;
+  width: 250px;
+  margin: 10px;
+  text-align: center;
+}
+
+.product-card img {
+  width: 100%;
+  border-radius: 8px;
+}
+
+.product-card a {
+  display: inline-block;
+  margin-top: 8px;
+  background: #b38f7d;
+  color: white;
+  padding: 8px 12px;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+/* ================= LEADS ================= */
+.lead-section {
+  background: #f1f1f1;
+  padding: 25px;
+  text-align: center;
+}
+
+.lead-section input {
+  padding: 10px;
+  margin: 5px;
+  width: 220px;
+}
+
+.lead-section button {
+  padding: 10px 20px;
+  background: #b38f7d;
+  color: white;
+  border: none;
+  border-radius: 5px;
+}
+
+/* ================= FOOTER ================= */
+footer {
+  background: #f8f2ef;
+  padding: 20px;
+  text-align: center;
+}
+
+.social-icons a {
+  margin: 0 10px;
+  font-size: 1.6rem;
+  color: #b38f7d;
+}
+
+/* ================= WHATSAPP ================= */
 .whatsapp-float {
   position: fixed;
   bottom: 20px;
   right: 20px;
   background: #25d366;
-  color: #fff;
-  width: 60px;
-  height: 60px;
+  width: 55px;
+  height: 55px;
   border-radius: 50%;
-  text-align: center;
-  font-size: 30px;
-  line-height: 60px;
-  z-index: 1000;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+  color: white;
+  font-size: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
 }
-.whatsapp-float:hover { background: #1ebe57; cursor: pointer; }
