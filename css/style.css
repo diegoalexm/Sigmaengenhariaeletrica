@@ -1,219 +1,47 @@
-/* ============================
-   Reset básico
-============================ */
-* {
+/* style.css - Estilos principais */
+
+/* Reset e básicos */
+body, h1, h2, h3, p, ul, li {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: 'Arial', sans-serif;
 }
+body { background-color: #fff; color: #333; }
 
-/* ============================
-   Corpo
-============================ */
-body {
-  background-color: #fffafc; /* nude suave */
-  color: #333;
-  line-height: 1.6;
-}
-
-/* ============================
-   Header
-============================ */
-.site-header {
-  background-color: #fde8f2; /* rosé */
+/* Cabeçalho */
+header {
   display: flex;
+  flex-direction: column;
   align-items: center;
-  justify-content: space-between;
-  padding: 20px 40px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  padding: 20px;
+  background: #fbe9e7;
 }
+header .logo { width: 150px; margin-bottom: 10px; }
+header h1 { color: #b56576; text-align: center; }
 
-.site-header img {
-  display: block;
-}
+/* Pesquisa */
+.search-container { text-align: center; margin: 20px; }
+.search-container input { width: 60%; padding: 10px; border-radius: 5px; border: 1px solid #ccc; }
 
-/* ============================
-   Categorias
-============================ */
-.categories {
-  background-color: #fff;
-  padding: 30px;
-  display: flex;
-  justify-content: center;
-  gap: 25px;
-}
+/* Categorias e destaque */
+.category-section, .highlight-section { padding: 30px; background: #fff5f0; margin-bottom: 20px; }
+.category-section h2, .highlight-section h2 { color: #b56576; margin-bottom: 10px; }
+.product-carousel { display: flex; gap: 15px; overflow-x: auto; }
+.product-card { background: #fff; border-radius: 10px; padding: 15px; min-width: 250px; text-align: center; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
+.product-card img { width: 100%; border-radius: 10px; }
+.product-card h3 { margin: 10px 0; color: #b56576; }
+.product-card p { font-size: 14px; margin-bottom: 10px; }
+.product-card a { display: inline-block; padding: 8px 15px; background: #f7c8b8; color: #fff; border-radius: 5px; text-decoration: none; }
 
-.category-link {
-  text-decoration: none;
-  color: #b85ca3;
-  font-weight: bold;
-  font-size: 16px;
-  padding: 8px 15px;
-  border-radius: 8px;
-  transition: all 0.3s ease;
-  background-color: #fde8f2;
-}
+/* Newsletter */
+.newsletter { padding: 30px; background: #fbe9e7; text-align: center; }
+.newsletter input { margin: 5px; padding: 10px; border-radius: 5px; border: 1px solid #ccc; }
+.newsletter button { padding: 10px 20px; background: #b56576; color: #fff; border: none; border-radius: 5px; cursor: pointer; }
 
-.category-link:hover {
-  background-color: #f7d0e2;
-  color: #fff;
-}
+/* Cookies */
+.cookies-banner { position: fixed; bottom: 0; width: 100%; background: #f7c8b8; color: #fff; text-align: center; padding: 10px; }
+.cookies-banner button { margin-left: 10px; padding: 5px 10px; background: #b56576; border: none; color: #fff; border-radius: 3px; cursor: pointer; }
 
-/* ============================
-   Carrossel de Produtos
-============================ */
-.product-carousel {
-  display: flex;
-  overflow-x: auto;
-  padding: 20px 10px;
-  scroll-behavior: smooth;
-}
-
-.product-card img {
-  transition: transform 0.3s ease;
-}
-
-.product-card img:hover {
-  transform: scale(1.05);
-}
-
-.product-card h3 {
-  font-size: 18px;
-  margin: 10px 0 5px;
-}
-
-.product-card p {
-  font-weight: bold;
-  margin-bottom: 10px;
-}
-
-.product-card a {
-  display: block;
-  margin: 5px 0;
-  text-decoration: none;
-  background-color: #b85ca3;
-  color: #fff;
-  padding: 8px;
-  border-radius: 8px;
-  font-weight: bold;
-  transition: all 0.3s ease;
-}
-
-.product-card a:hover {
-  background-color: #a63b95;
-}
-
-/* ============================
-   WhatsApp / E-mail Capture
-============================ */
-.contact-capture {
-  background-color: #fde8f2;
-  padding: 40px 20px;
-  text-align: center;
-  margin: 40px 0;
-  border-radius: 12px;
-}
-
-.contact-capture h2 {
-  color: #b85ca3;
-  margin-bottom: 15px;
-}
-
-#contact-form {
-  display: flex;
-  justify-content: center;
-  gap: 10px;
-  flex-wrap: wrap;
-  margin-top: 15px;
-}
-
-#contact-input {
-  padding: 12px 15px;
-  border-radius: 8px;
-  border: 1px solid #ccc;
-  width: 250px;
-}
-
-#contact-form button {
-  padding: 12px 20px;
-  border-radius: 8px;
-  border: none;
-  background-color: #b85ca3;
-  color: #fff;
-  font-weight: bold;
-  cursor: pointer;
-  transition: all 0.3s ease;
-}
-
-#contact-form button:hover {
-  background-color: #a63b95;
-}
-
-/* ============================
-   Footer
-============================ */
-.site-footer {
-  background-color: #fde8f2;
-  padding: 30px 20px;
-  color: #333;
-  text-align: center;
-  margin-top: 50px;
-  border-top: 1px solid #f7d0e2;
-}
-
-.site-footer a {
-  color: #b85ca3;
-  text-decoration: none;
-  font-weight: bold;
-  margin: 0 5px;
-}
-
-.site-footer a:hover {
-  color: #a63b95;
-}
-
-/* ============================
-   Banner de Cookies
-============================ */
-#cookie-banner span a {
-  text-decoration: underline;
-}
-
-#cookie-banner button {
-  transition: all 0.3s ease;
-}
-
-#cookie-banner button:hover {
-  background-color: #a63b95;
-}
-
-/* ============================
-   Responsividade
-============================ */
-@media (max-width: 768px) {
-  .site-header {
-    flex-direction: column;
-    text-align: center;
-    gap: 15px;
-  }
-
-  .categories {
-    flex-direction: column;
-    gap: 15px;
-    padding: 20px;
-  }
-
-  .product-carousel {
-    flex-wrap: nowrap;
-    overflow-x: scroll;
-  }
-
-  #contact-form {
-    flex-direction: column;
-  }
-
-  #contact-input {
-    width: 80%;
-  }
-}
+/* Rodapé */
+footer { background: #fbe9e7; padding: 20px; text-align: center; }
+footer .social a { margin: 0 5px; color: #b56576; text-decoration: none; }
