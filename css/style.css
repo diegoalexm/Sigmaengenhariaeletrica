@@ -1,6 +1,6 @@
 /* style.css - Estilos principais */
 
-/* Reset e básicos */
+/* Reset básico */
 body, h1, h2, h3, p, ul, li {
   margin: 0;
   padding: 0;
@@ -44,4 +44,22 @@ header h1 { color: #b56576; text-align: center; }
 
 /* Rodapé */
 footer { background: #fbe9e7; padding: 20px; text-align: center; }
-footer .social a { margin: 0 5px; color: #b56576; text-decoration: none; }
+footer .social a { margin: 0 5px; color: #b56576; font-size: 24px; text-decoration: none; }
+
+/* WhatsApp flutuante */
+.whatsapp-float {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #25d366;
+  color: #fff;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  text-align: center;
+  font-size: 30px;
+  line-height: 60px;
+  z-index: 1000;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+}
+.whatsapp-float:hover { background: #1ebe57; cursor: pointer; }
