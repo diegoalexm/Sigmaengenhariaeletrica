@@ -1,28 +1,34 @@
+// Carrega o arquivo products.json
 fetch('products.json')
-  .then(res => res.json())
+  .then(response => response.json())
   .then(data => {
-    const products = data.products;
 
-    products.forEach(product => {
+    // Loop em todos os produtos
+    data.products.forEach(product => {
+
+      // Cria o card do produto
       const card = document.createElement('div');
       card.className = 'product-card';
+
+      // Imagem principal
       card.innerHTML = `
-        <img src="${product.image}" alt="${product.name}">
+        <img src="${product.images[0]}" alt="${product.name}">
         <h3>${product.name}</h3>
-        <a href="${product.link}" target="_blank">Comprar</a>
+        <a href="page/product.html?id=${product.id}">Ver detalhes</a>
       `;
 
-      // Categoria
-      const section = document.querySelector(
-        `#${product.category} .products`
-      );
-      if (section) section.appendChild(card);
-
-      // Destaques
-      if (product.featured === true) {
-        document
-          .getElementById('featured-products')
-          .appendChild(card.cloneNode(true));
+      // Exibe nos destaques se highlight = true
+      if (product.highlight) {
+        document.getElementById('featured-products').appendChild(card);
       }
+
+      // Exibe na categoria correta
+      const categoryContainer = document.getElementById(product.category);
+      if (categoryContainer) {
+        categoryContainer.appendChild(card.cloneNode(true));
+      }
+
     });
-  });
+
+  })
+  .catch(error => console.error('Erro ao carregar produtos:', error));
