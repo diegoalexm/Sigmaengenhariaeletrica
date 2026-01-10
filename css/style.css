@@ -1,132 +1,122 @@
-/* ================= RESET ================= */
-* {
+body {
   margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: Arial, sans-serif;
+  font-family: 'Montserrat', sans-serif;
+  background: #fff;
+  color: #333;
 }
 
-/* ================= HEADER ================= */
 .header {
-  background: #f7efe9;
   text-align: center;
-  padding: 25px;
+  padding: 20px;
 }
 
 .logo {
-  max-width: 160px;
-  margin-bottom: 10px;
+  max-width: 180px;
 }
 
-/* ================= MENU ================= */
-.category-menu {
+.hero-text {
+  font-family: 'Playfair Display', serif;
+  font-size: 26px;
+  color: #c9a24d;
+  margin: 10px 0;
+}
+
+.main-nav {
   display: flex;
+  gap: 18px;
   justify-content: center;
-  gap: 15px;
-  padding: 12px;
-  background: #fff;
-  border-bottom: 1px solid #eee;
+  margin-top: 10px;
 }
 
-.category-menu a {
+.main-nav a {
+  font-size: 14px;
+  color: #777;
   text-decoration: none;
-  color: #b38f7d;
-  font-weight: bold;
 }
 
-/* ================= BUSCA ================= */
-.search-container {
-  padding: 15px;
+h2 {
   text-align: center;
+  margin-top: 40px;
+  color: #b58b4a;
 }
 
-.search-container input {
-  width: 90%;
-  padding: 10px;
-  border-radius: 8px;
-  border: 1px solid #ccc;
-}
-
-/* ================= CATEGORIAS ================= */
-.category {
-  padding: 25px;
-}
-
-.category h2 {
-  color: #b38f7d;
-  margin-bottom: 15px;
-}
-
-/* ================= PRODUTOS ================= */
-.products {
+.products-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit,minmax(220px,1fr));
-  gap: 15px;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 20px;
+  padding: 20px;
 }
 
 .product-card {
   border: 1px solid #eee;
-  padding: 10px;
+  padding: 12px;
+  text-align: center;
   border-radius: 10px;
 }
 
 .product-card img {
-  width: 100%;
-  border-radius: 8px;
+  max-width: 100%;
+  height: 180px;
+  object-fit: contain;
+}
+
+.product-card h3 {
+  font-size: 15px;
 }
 
 .product-card a {
-  display: block;
-  margin-top: 10px;
-  background: #b38f7d;
-  color: #fff;
-  text-align: center;
-  padding: 8px;
-  border-radius: 8px;
+  display: inline-block;
+  margin-top: 8px;
+  color: #c9a24d;
   text-decoration: none;
 }
 
-/* ================= LEADS ================= */
 .newsletter {
-  background: #f7efe9;
-  padding: 30px;
   text-align: center;
+  padding: 30px;
+  background: #f9f6f2;
 }
 
 .newsletter input {
-  display: block;
-  width: 90%;
-  margin: 10px auto;
   padding: 10px;
+  margin: 5px;
+  width: 220px;
 }
 
 .newsletter button {
-  background: #b38f7d;
-  color: #fff;
+  padding: 10px 20px;
+  background: #c9a24d;
   border: none;
-  padding: 10px 25px;
-  border-radius: 10px;
+  color: #fff;
+  cursor: pointer;
 }
 
-/* ================= FOOTER ================= */
-footer {
-  padding: 20px;
-  text-align: center;
-  background: #fff;
-}
-
-.social-icons img {
-  width: 28px;
-  margin: 0 8px;
-}
-
-/* ================= WHATSAPP ================= */
 .whatsapp-float {
   position: fixed;
   bottom: 20px;
   right: 20px;
+  background: #25d366;
+  color: #fff;
+  font-size: 26px;
+  padding: 12px 15px;
+  border-radius: 50%;
 }
 
-.whatsapp-float img {
-  width: 55px;
+footer {
+  text-align: center;
+  padding: 20px;
+  background: #fff;
+}
+
+.footer-links {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.social i {
+  font-size: 22px;
+  margin: 10px;
+  color: #555;
 }
