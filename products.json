@@ -1,0 +1,36 @@
+{
+  "products": [
+    {
+      "id": "monj01",
+      "name": "Monja Detox Premium",
+      "category": "saude-bem-estar",
+      "image": "img/products/saude-bem-estar/Monj01.jpg",
+      "link": "https://braip.com/produto1",
+      "featured": true
+    },
+    {
+      "id": "perf01",
+      "name": "Perfume Divino Luxo",
+      "category": "perfumes-divinos",
+      "image": "img/products/perfumes-divinos/Perf01.jpg",
+      "link": "https://mercadolivre.com/produto1",
+      "featured": true
+    },
+    {
+      "id": "skin01",
+      "name": "Sérum Iluminador",
+      "category": "skincare-maravilhosos",
+      "image": "img/products/skincare-maravilhosos/Skin01.jpg",
+      "link": "https://mercadolivre.com/produto2",
+      "featured": true
+    },
+    {
+      "id": "ps501",
+      "name": "PlayStation 5",
+      "category": "super-techs",
+      "image": "img/products/super-techs/PS501.jpg",
+      "link": "https://mercadolivre.com/produto3",
+      "featured": false
+    }
+  ]
+}
