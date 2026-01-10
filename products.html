@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Monjarim - Bella e Dellicada</title>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/style.css">
+
+  <!-- Google Tag Manager -->
+  <script>
+    (function(w,d,s,l,i){
+      w[l]=w[l]||[];
+      w[l].push({'gtm.start': new Date().getTime(),event:'gtm.js'});
+      var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),
+      dl=l!='dataLayer'?'&l='+l:'';
+      j.async=true;
+      j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;
+      f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-WT4MG45L');
+  </script>
+</head>
+<body>
+
+  <!-- Google Tag Manager (noscript) -->
+  <noscript>
+    <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WT4MG45L"
+      height="0" width="0" style="display:none;visibility:hidden"></iframe>
+  </noscript>
+
+  <!-- Header -->
+  <header class="site-header">
+    <div class="logo">
+      <img src="img/logo.png" alt="Bella e Dellicada" width="150">
+    </div>
+  </header>
+
+  <!-- Página do Produto -->
+  <main class="product-page" style="padding: 40px 20px;">
+    <div id="product-container">
+      <!-- O main.js irá gerar o conteúdo do produto a partir do JSON -->
+    </div>
+
+    <!-- Captura de WhatsApp / E-mail -->
+    <section class="contact-capture" style="margin-top: 50px; text-align:center;">
+      <h2>Receba novidades e ofertas exclusivas</h2>
+      <p>Digite seu WhatsApp ou e-mail e fique por dentro das nossas promoções!</p>
+      <form id="contact-form">
+        <input type="text" name="contact" id="contact-input" placeholder="WhatsApp ou E-mail" required>
+        <button type="submit">Cadastrar</button>
+      </form>
+      <p id="form-message" style="margin-top: 10px; color: green;"></p>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer" style="text-align:center; padding:20px 0; background:#fde8f2;">
+    <p>© Bella e Dellicada — Todos os direitos reservados</p>
+    <p>Contato: <a href="mailto:bellaedellicada@gmail.com">bellaedellicada@gmail.com</a></p>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/main.js"></script>
+
+  <script>
+    // Captura de contato via WhatsApp ou E-mail
+    const contactForm = document.getElementById('contact-form');
+    const contactInput = document.getElementById('contact-input');
+    const formMessage = document.getElementById('form-message');
+
+    contactForm.addEventListener('submit', function(e) {
+      e.preventDefault();
+      
+      const contactValue = contactInput.value.trim();
+
+      if(contactValue === '') {
+        formMessage.textContent = 'Por favor, insira seu WhatsApp ou E-mail.';
+        formMessage.style.color = 'red';
+        return;
+      }
+
+      // Aqui você pode enviar para seu servidor ou API de newsletter
+      console.log('Contato cadastrado:', contactValue);
+      formMessage.textContent = 'Obrigado! Você foi cadastrado com sucesso.';
+      formMessage.style.color = 'green';
+
+      // Limpa o campo
+      contactInput.value = '';
+    });
+  </script>
+</body>
+</html>
