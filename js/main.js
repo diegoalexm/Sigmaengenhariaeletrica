@@ -3,42 +3,56 @@ fetch('products.json')
   .then(res => res.json())
   .then(data => {
 
-    // Criar t?tulos das categorias
+    // Para cada categoria existente
     data.categories.forEach(cat => {
+
+      // Seleciona a section correspondente pelo ID
       const section = document.getElementById(cat.id);
 
+      // Cria o t?tulo da categoria
       const title = document.createElement('h2');
       title.textContent = cat.name;
       section.appendChild(title);
-    });
 
-    // Inserir produtos
-    data.products.forEach(prod => {
-      const section = document.getElementById(prod.category);
+      // Container de produtos
+      const container = document.createElement('div');
+      container.className = 'products';
 
-      const card = document.createElement('div');
-      card.className = 'product-card';
+      // Filtra produtos daquela categoria
+      data.products
+        .filter(p => p.category === cat.id)
+        .forEach(prod => {
 
-      card.innerHTML = `
-        <img src="${prod.image}">
-        <h3>${prod.name}</h3>
-        <a href="${prod.link}" target="_blank">Comprar</a>
-      `;
+          // Card do produto
+          const card = document.createElement('div');
+          card.className = 'product-card';
 
-      section.appendChild(card);
+          // Imagem
+          const img = document.createElement('img');
+          img.src = prod.images[0];
+          card.appendChild(img);
+
+          // Nome
+          const name = document.createElement('p');
+          name.textContent = prod.name;
+          card.appendChild(name);
+
+          // Bot?o
+          const link = document.createElement('a');
+          link.href = prod.links[0].url;
+          link.target = '_blank';
+          link.textContent = 'Ver oferta';
+          card.appendChild(link);
+
+          container.appendChild(card);
+        });
+
+      section.appendChild(container);
     });
   });
 
-// ================= FORM DE LEADS =================
+// ================= FORM LEADS =================
 document.getElementById('leadForm').addEventListener('submit', function(e){
   e.preventDefault();
-
-  const email = document.getElementById('email').value;
-  const whatsapp = document.getElementById('whatsapp').value;
-
-  // Aqui voc? conecta com Google Forms ou Apps Script
-  console.log('Email:', email);
-  console.log('WhatsApp:', whatsapp);
-
-  alert('Dados enviados com sucesso!');
+  alert('Lead capturado! Integra??o com Google Forms.');
 });
