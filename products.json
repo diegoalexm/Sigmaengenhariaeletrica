@@ -2,72 +2,71 @@
   "categories": [
     {
       "id": "saude-bem-estar",
-      "name": "Saúde bem estar",
-      "image": "img/products/saude-bem-estar/saude-bem-estar.jpg"
+      "name": "Saúde Bem-Estar",
+      "image": "img/products/saude-bem-estar/saude-bem-estar.jpg",
+      "products": [
+        {
+          "id": "monj01",
+          "title": "Monjarim - O PODER DO MONJARO EM CÁPSULAS",
+          "description": "Monjarim ajuda a desinchar, reduzir medidas, eliminar a vontade de comer doce e perder peso dormindo. Fórmula segura com garantia de satisfação 90 dias.",
+          "images": [
+            "img/products/saude-bem-estar/Monj01.jpg",
+            "img/products/saude-bem-estar/Monj02.jpg",
+            "img/products/saude-bem-estar/Monj03.jpg",
+            "img/products/saude-bem-estar/Monj04.jpg",
+            "img/products/saude-bem-estar/Monj05.jpg",
+            "img/products/saude-bem-estar/Monj06.jpg",
+            "img/products/saude-bem-estar/Monj07.jpg",
+            "img/products/saude-bem-estar/Monj08.jpg",
+            "img/products/saude-bem-estar/Monj09.jpg"
+          ],
+          "price": "",
+          "link": "https://ev.braip.com/ref?pl=pla1qrk8&ck=chew4mj1&af=afi6595eep",
+          "features": true
+        }
+      ]
     },
     {
       "id": "perfumes-divinos",
       "name": "Perfumes Divinos",
-      "image": "img/products/perfumes-divinos/perfumes-divinos.jpg"
+      "image": "img/products/perfumes-divinos/perfumes-divinos.jpg",
+      "products": [
+        {
+          "id": "per01",
+          "title": "Perfume Lancôme La Vie Est Belle Rosa Extraordinária EDP 100ml",
+          "description": "Perfume floral, livre de crueldade. País de origem: França. Com notas de rosa, bergamota, íris e gourmand. Uma fragrância sofisticada e elegante.",
+          "images": [
+            "img/products/perfumes-divinos/Per01.jpg",
+            "img/products/perfumes-divinos/Per02.jpg",
+            "img/products/perfumes-divinos/Per03.jpg",
+            "img/products/perfumes-divinos/Per04.jpg"
+          ],
+          "price": "",
+          "link": "https://mercadolivre.com/sec/1hLXCcJ",
+          "features": true
+        }
+      ]
     },
     {
       "id": "skincare-maravilhosos",
       "name": "Skincare Maravilhosos",
-      "image": "img/products/skincare-maravilhosos/skincare-maravilhosos.jpg"
-    }
-  ],
-  "products": [
-    {
-      "id": "Per01",
-      "category": "perfumes-divinos",
-      "title": "Perfume Lancôme La Vie Est Belle Rosa Extraordinária EDP 100ml",
-      "description": "Perfume floral, livre de crueldade, da França. La Vie Est Belle convida você a escrever sua própria história e trilhar seu caminho para a felicidade à sua maneira. Notas: Bergamota da Calábria e óleo de laranja, Íris e Rosa, Gourmand e Ambroxan.",
-      "features": true,
-      "images": [
-        "img/products/perfumes-divinos/Per01.jpg",
-        "img/products/perfumes-divinos/Per02.jpg",
-        "img/products/perfumes-divinos/Per03.jpg",
-        "img/products/perfumes-divinos/Per04.jpg"
-      ],
-      "link": "https://mercadolivre.com/sec/1hLXCcJ"
-    },
-    {
-      "id": "Skin01",
-      "category": "skincare-maravilhosos",
-      "title": "Creme para Olhos Lancôme Barrier Night 50ml",
-      "description": "Creme antienvelhecimento noturno para todos os tipos de pele. Testado dermatologicamente, ajuda a reparar marcas do tempo, deixando a pele rejuvenescida e revitalizada.",
-      "features": true,
-      "images": [
-        "img/products/skincare-maravilhosos/Skin01.jpg",
-        "img/products/skincare-maravilhosos/Skin02.jpg",
-        "img/products/skincare-maravilhosos/Skin03.jpg",
-        "img/products/skincare-maravilhosos/Skin04.jpg"
-      ],
-      "link": "https://mercadolivre.com/sec/2LMw37W"
-    },
-    {
-      "id": "Monj01",
-      "category": "saude-bem-estar",
-      "title": "Monjarim - O PODER DO MONJARO EM CÁPSULAS",
-      "description": "Monjarim auxilia na queima de gordura, redução de medidas, controle de apetite e eliminação do inchaço, mantendo a massa magra. Fórmula exclusiva com resultados comprovados.",
-      "features": true,
-      "images": [
-        "img/products/saude-bem-estar/Monj01.jpg",
-        "img/products/saude-bem-estar/Monj02.jpg",
-        "img/products/saude-bem-estar/Monj03.jpg",
-        "img/products/saude-bem-estar/Monj04.jpg",
-        "img/products/saude-bem-estar/Monj05.jpg",
-        "img/products/saude-bem-estar/Monj06.jpg",
-        "img/products/saude-bem-estar/Monj07.jpg",
-        "img/products/saude-bem-estar/Monj08.jpg",
-        "img/products/saude-bem-estar/Monj09.jpg"
-      ],
-      "links": {
-        "1-mes": "https://ev.braip.com/ref?pl=pla1qrk8&ck=chew4mj1&af=afi6595eep",
-        "3-meses": "https://ev.braip.com/ref?pl=plarzq9w&ck=chew4mj1&af=afi6595eep",
-        "5-meses": "https://ev.braip.com/ref?pl=plaooq9j&ck=chew4mj1&af=afi6595eep",
-        "10-meses": "https://ev.braip.com/ref?pl=plak8rl2&ck=chew4mj1&af=afi6595eep"
-      }
+      "image": "img/products/skincare-maravilhosos/skincare-maravilhosos.jpg",
+      "products": [
+        {
+          "id": "skin01",
+          "title": "Creme para Olhos Lancôme Barrier Night 50ml",
+          "description": "Creme noturno antienvelhecimento, indicado para todos os tipos de pele. Pele rejuvenescida e revitalizada com toque aveludado.",
+          "images": [
+            "img/products/skincare-maravilhosos/Skin01.jpg",
+            "img/products/skincare-maravilhosos/Skin02.jpg",
+            "img/products/skincare-maravilhosos/Skin03.jpg",
+            "img/products/skincare-maravilhosos/Skin04.jpg"
+          ],
+          "price": "",
+          "link": "https://mercadolivre.com/sec/2LMw37W",
+          "features": true
+        }
+      ]
     }
   ]
 }
