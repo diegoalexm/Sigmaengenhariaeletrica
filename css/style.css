@@ -1,85 +1,246 @@
-/* RESET */
-body {
+/* Reset b?sico */
+* {
   margin: 0;
-  font-family: 'Georgia', serif;
-  background: #f7e9ec;
-  color: #6b3b47;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
 }
 
-/* HEADER */
-.header {
+body {
+  background-color: #f5e4e0; /* Rosa nude */
+  color: #333;
+  line-height: 1.6;
+}
+
+header {
   text-align: center;
-  padding: 30px;
+  padding: 20px 0;
+  background-color: #f5e4e0;
 }
 
-.logo {
+header .logo {
   max-width: 180px;
 }
 
-.headline {
-  font-family: 'cursive';
-  color: #b08a8f;
+header .subtitle {
+  font-family: 'Dancing Script', cursive;
+  font-size: 1.4rem;
+  color: #a85c52;
+  margin-top: 10px;
 }
 
-/* BUSCA */
-.search-section input {
-  width: 90%;
-  padding: 12px;
-  margin: 20px auto;
-  display: block;
-  border-radius: 30px;
-  border: none;
+/* Se??o Descobertas Deslumbrantes */
+.features-section {
+  padding: 30px;
+  text-align: center;
 }
 
-/* PRODUTOS */
-.product-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit,minmax(220px,1fr));
-  gap: 20px;
-  padding: 20px;
+.features-section h2 {
+  font-family: 'Dancing Script', cursive;
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #a85c52;
 }
 
-.product-card img {
+.features-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+}
+
+.features-container .feature-card {
+  border: 2px solid #a85c52;
+  border-radius: 15px;
+  overflow: hidden;
+  width: 200px;
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+
+.features-container .feature-card:hover {
+  transform: scale(1.05);
+}
+
+.features-container .feature-card img {
   width: 100%;
-  border-radius: 16px;
+  display: block;
 }
 
-/* CATEGORIAS */
+/* Categorias */
 .categories {
   display: flex;
-  gap: 20px;
   justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
   padding: 30px;
 }
 
-.category-card img {
+.category-card {
   width: 220px;
-  border-radius: 18px;
-}
-
-/* NEWSLETTER */
-.newsletter {
   text-align: center;
-  padding: 40px;
+  cursor: pointer;
 }
 
-.success-msg {
-  display: none;
-  color: #b85c7d;
+.category-card img {
+  width: 100%;
+  border-radius: 15px;
 }
 
-/* WHATSAPP */
+.category-card h3 {
+  margin-top: 10px;
+  color: #a85c52;
+  font-family: 'Dancing Script', cursive;
+  font-size: 1.3rem;
+}
+
+/* Newsletter */
+.newsletter {
+  background-color: #fff1f0;
+  padding: 30px;
+  text-align: center;
+  border-radius: 15px;
+  margin: 30px auto;
+  max-width: 500px;
+}
+
+.newsletter input {
+  padding: 10px;
+  margin: 5px;
+  width: calc(50% - 12px);
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.newsletter button {
+  padding: 10px 20px;
+  background-color: #a85c52;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.newsletter button:hover {
+  background-color: #8b4740;
+}
+
+/* Footer */
+footer {
+  background-color: #f5e4e0;
+  padding: 20px;
+  text-align: center;
+}
+
+footer p {
+  margin-bottom: 10px;
+}
+
+footer .social-icons img {
+  width: 35px;
+  margin: 0 8px;
+  vertical-align: middle;
+}
+
+/* WhatsApp flutuante */
 .whatsapp-float {
   position: fixed;
   bottom: 20px;
   right: 20px;
-  font-size: 36px;
-  color: #25d366;
+  z-index: 999;
+  width: 60px;
 }
 
-/* FOOTER */
-footer {
-  background: #f0d9df;
+.whatsapp-float img {
+  width: 100%;
+  display: block;
+}
+
+/* P?gina de produto */
+.product-page {
+  display: flex;
+  flex-wrap: wrap;
   padding: 30px;
-  text-align: center;
+  justify-content: center;
+  gap: 20px;
+}
+
+.product-images {
+  flex: 1;
+  min-width: 250px;
+  max-width: 400px;
+}
+
+.product-images img {
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+.product-info {
+  flex: 1;
+  min-width: 250px;
+  max-width: 400px;
+}
+
+.product-info h2 {
+  font-family: 'Dancing Script', cursive;
+  font-size: 2rem;
+  color: #a85c52;
+  margin-bottom: 10px;
+}
+
+.product-info p {
+  margin-bottom: 10px;
+}
+
+.btn-buy {
+  display: inline-block;
+  padding: 12px 25px;
+  background-color: #a85c52;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 8px;
+  margin-top: 15px;
+}
+
+.btn-buy:hover {
+  background-color: #8b4740;
+}
+
+/* Institucional */
+.institucional-page section {
+  background-color: #fff1f0;
+  margin: 20px auto;
+  padding: 20px;
+  border-radius: 10px;
+  max-width: 800px;
+}
+
+.institucional-page h2 {
+  font-family: 'Dancing Script', cursive;
+  color: #a85c52;
+  margin-bottom: 10px;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .product-page {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .features-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .categories {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .newsletter input {
+    width: calc(100% - 22px);
+  }
 }
