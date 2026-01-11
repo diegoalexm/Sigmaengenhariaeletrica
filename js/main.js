@@ -1,48 +1,70 @@
-// Carrega o JSON de produtos
+// Carrega o JSON principal
 fetch('products.json')
   .then(res => res.json())
   .then(data => {
 
-    // Renderiza produtos destacados (highlight = true)
-    const highlights = document.getElementById('highlights');
-    if (highlights) {
+    /* ===============================
+       CATEGORIAS (HOME)
+    =============================== */
+    const categoriesDiv = document.getElementById('categories');
+    if (categoriesDiv) {
+      data.categories.forEach(cat => {
+        categoriesDiv.innerHTML += `
+          <a href="products.html?category=${cat.id}" class="card">
+            <img src="img/products/${cat.id}/${cat.id}.jpg">
+            <h3>${cat.name}</h3>
+          </a>
+        `;
+      });
+    }
+
+    /* ===============================
+       DESTAQUES
+    =============================== */
+    const featuredDiv = document.getElementById('featured-products');
+    if (featuredDiv) {
+      data.products.filter(p => p.highlight).forEach(p => {
+        featuredDiv.innerHTML += `
+          <div class="card">
+            <img src="${p.images[0]}">
+            <h3>${p.name}</h3>
+            <a href="products.html?category=${p.category}">Ver detalhes</a>
+          </div>
+        `;
+      });
+    }
+
+    /* ===============================
+       LISTAGEM POR CATEGORIA
+    =============================== */
+    const params = new URLSearchParams(window.location.search);
+    const category = params.get('category');
+
+    if (category) {
+      document.getElementById('categoryTitle').innerText =
+        data.categories.find(c => c.id === category)?.name || '';
+
+      const list = document.getElementById('productList');
       data.products
-        .filter(p => p.highlight)
+        .filter(p => p.category === category)
         .forEach(p => {
-          highlights.innerHTML += `
-            <div class="product-card">
+          list.innerHTML += `
+            <div class="card">
               <img src="${p.images[0]}">
-              <h4>${p.name}</h4>
-              <a href="products.html?id=${p.id}">Ver detalhes</a>
+              <h3>${p.name}</h3>
+              ${(p.treatments || []).map(t =>
+                `<a href="${t.link}" target="_blank">${t.label}</a>`
+              ).join('')}
             </div>
           `;
         });
     }
-
-    // P?gina de detalhes do produto
-    const params = new URLSearchParams(window.location.search);
-    const productId = params.get('id');
-
-    if (productId) {
-      const product = data.products.find(p => p.id === productId);
-      const container = document.getElementById('product-detail');
-
-      if (product) {
-        container.innerHTML = `
-          <h1>${product.name}</h1>
-          <div class="gallery">
-            ${product.images.map(img => `<img src="${img}">`).join('')}
-          </div>
-          <p>${product.description}</p>
-          <div class="buy-links">
-            ${product.links.map(l => `<a href="${l.url}" target="_blank">${l.label}</a>`).join('')}
-          </div>
-        `;
-      }
-    }
   });
 
-// Salva lead sem redirecionar
-function saveLead() {
-  document.getElementById('leadMsg').innerText = 'Cadastrado com sucesso ?';
-}
+/* ===============================
+   FORMUL?RIO (Google Forms)
+=============================== */
+document.getElementById('leadForm')?.addEventListener('submit', e => {
+  e.preventDefault();
+  document.getElementById('leadMessage').innerText = "Cadastrado com sucesso ?";
+});
