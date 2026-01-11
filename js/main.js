@@ -1,70 +1,98 @@
-// Carrega o JSON principal
+// Carrega JSON
 fetch('products.json')
-  .then(res => res.json())
-  .then(data => {
+.then(res => res.json())
+.then(data => initSite(data));
 
-    /* ===============================
-       CATEGORIAS (HOME)
-    =============================== */
-    const categoriesDiv = document.getElementById('categories');
-    if (categoriesDiv) {
-      data.categories.forEach(cat => {
-        categoriesDiv.innerHTML += `
-          <a href="products.html?category=${cat.id}" class="card">
-            <img src="img/products/${cat.id}/${cat.id}.jpg">
-            <h3>${cat.name}</h3>
-          </a>
-        `;
-      });
-    }
+function initSite(data){
+  loadFeatured(data);
+  loadCategories(data);
+  loadCategoryPage(data);
+  loadProductPage(data);
+}
 
-    /* ===============================
-       DESTAQUES
-    =============================== */
-    const featuredDiv = document.getElementById('featured-products');
-    if (featuredDiv) {
-      data.products.filter(p => p.highlight).forEach(p => {
-        featuredDiv.innerHTML += `
-          <div class="card">
-            <img src="${p.images[0]}">
-            <h3>${p.name}</h3>
-            <a href="products.html?category=${p.category}">Ver detalhes</a>
-          </div>
-        `;
-      });
-    }
+/* ? Destaques */
+function loadFeatured(data){
+  const el = document.getElementById('featured');
+  if(!el) return;
 
-    /* ===============================
-       LISTAGEM POR CATEGORIA
-    =============================== */
-    const params = new URLSearchParams(window.location.search);
-    const category = params.get('category');
-
-    if (category) {
-      document.getElementById('categoryTitle').innerText =
-        data.categories.find(c => c.id === category)?.name || '';
-
-      const list = document.getElementById('productList');
-      data.products
-        .filter(p => p.category === category)
-        .forEach(p => {
-          list.innerHTML += `
-            <div class="card">
-              <img src="${p.images[0]}">
-              <h3>${p.name}</h3>
-              ${(p.treatments || []).map(t =>
-                `<a href="${t.link}" target="_blank">${t.label}</a>`
-              ).join('')}
-            </div>
-          `;
-        });
-    }
+  data.products.filter(p => p.featured).forEach(p=>{
+    el.innerHTML += `
+      <div class="card">
+        <img src="${p.images[0]}">
+        <h3>${p.name}</h3>
+        <a href="product.html?id=${p.id}">Ver detalhes</a>
+      </div>
+    `;
   });
+}
 
-/* ===============================
-   FORMUL?RIO (Google Forms)
-=============================== */
-document.getElementById('leadForm')?.addEventListener('submit', e => {
-  e.preventDefault();
-  document.getElementById('leadMessage').innerText = "Cadastrado com sucesso ?";
-});
+/* ? Categorias */
+function loadCategories(data){
+  const el = document.getElementById('categories');
+  if(!el) return;
+
+  data.categories.forEach(c=>{
+    el.innerHTML += `
+      <a href="products.html?cat=${c.id}" class="category-card">
+        <img src="img/products/${c.id}/${c.id}.jpg">
+        <span>${c.name}</span>
+      </a>
+    `;
+  });
+}
+
+/* ? P?gina categoria */
+function loadCategoryPage(data){
+  const params = new URLSearchParams(window.location.search);
+  const cat = params.get('cat');
+  if(!cat) return;
+
+  const title = document.getElementById('categoryTitle');
+  const list = document.getElementById('productList');
+
+  title.innerText = data.categories.find(c=>c.id===cat).name;
+
+  data.products.filter(p=>p.category===cat).forEach(p=>{
+    list.innerHTML += `
+      <div class="card">
+        <img src="${p.images[0]}">
+        <h3>${p.name}</h3>
+        <a href="product.html?id=${p.id}">Ver detalhes</a>
+      </div>
+    `;
+  });
+}
+
+/* ? P?gina produto */
+function loadProductPage(data){
+  const params = new URLSearchParams(window.location.search);
+  const id = params.get('id');
+  if(!id) return;
+
+  const p = data.products.find(x=>x.id===id);
+  const el = document.getElementById('productDetail');
+
+  let imgs = p.images.map(i=>`<img src="${i}">`).join('');
+
+  let links = '';
+  if(p.links){
+    p.links.forEach(l=>{
+      links += `<a href="${l.url}" target="_blank" class="buy">${l.label}</a>`;
+    });
+  } else {
+    links = `<a href="${p.link}" target="_blank" class="buy">Comprar agora</a>`;
+  }
+
+  el.innerHTML = `
+    <h1>${p.name}</h1>
+    <div class="carousel">${imgs}</div>
+    <p>${p.description}</p>
+    ${links}
+  `;
+}
+
+/* ? Leads */
+function saveLead(){
+  document.getElementById('leadMsg').innerText =
+    'Cadastrado com sucesso ?';
+}
