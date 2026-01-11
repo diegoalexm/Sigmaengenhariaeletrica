@@ -1,122 +1,85 @@
+/* RESET */
 body {
   margin: 0;
-  font-family: 'Montserrat', sans-serif;
-  background: #fff;
-  color: #333;
+  font-family: 'Georgia', serif;
+  background: #f7e9ec;
+  color: #6b3b47;
 }
 
+/* HEADER */
 .header {
   text-align: center;
-  padding: 20px;
+  padding: 30px;
 }
 
 .logo {
   max-width: 180px;
 }
 
-.hero-text {
-  font-family: 'Playfair Display', serif;
-  font-size: 26px;
-  color: #c9a24d;
-  margin: 10px 0;
+.headline {
+  font-family: 'cursive';
+  color: #b08a8f;
 }
 
-.main-nav {
-  display: flex;
-  gap: 18px;
-  justify-content: center;
-  margin-top: 10px;
+/* BUSCA */
+.search-section input {
+  width: 90%;
+  padding: 12px;
+  margin: 20px auto;
+  display: block;
+  border-radius: 30px;
+  border: none;
 }
 
-.main-nav a {
-  font-size: 14px;
-  color: #777;
-  text-decoration: none;
-}
-
-h2 {
-  text-align: center;
-  margin-top: 40px;
-  color: #b58b4a;
-}
-
-.products-grid {
+/* PRODUTOS */
+.product-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  grid-template-columns: repeat(auto-fit,minmax(220px,1fr));
   gap: 20px;
   padding: 20px;
 }
 
-.product-card {
-  border: 1px solid #eee;
-  padding: 12px;
-  text-align: center;
-  border-radius: 10px;
-}
-
 .product-card img {
-  max-width: 100%;
-  height: 180px;
-  object-fit: contain;
+  width: 100%;
+  border-radius: 16px;
 }
 
-.product-card h3 {
-  font-size: 15px;
+/* CATEGORIAS */
+.categories {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  padding: 30px;
 }
 
-.product-card a {
-  display: inline-block;
-  margin-top: 8px;
-  color: #c9a24d;
-  text-decoration: none;
+.category-card img {
+  width: 220px;
+  border-radius: 18px;
 }
 
+/* NEWSLETTER */
 .newsletter {
   text-align: center;
-  padding: 30px;
-  background: #f9f6f2;
+  padding: 40px;
 }
 
-.newsletter input {
-  padding: 10px;
-  margin: 5px;
-  width: 220px;
+.success-msg {
+  display: none;
+  color: #b85c7d;
 }
 
-.newsletter button {
-  padding: 10px 20px;
-  background: #c9a24d;
-  border: none;
-  color: #fff;
-  cursor: pointer;
-}
-
+/* WHATSAPP */
 .whatsapp-float {
   position: fixed;
   bottom: 20px;
   right: 20px;
-  background: #25d366;
-  color: #fff;
-  font-size: 26px;
-  padding: 12px 15px;
-  border-radius: 50%;
+  font-size: 36px;
+  color: #25d366;
 }
 
+/* FOOTER */
 footer {
+  background: #f0d9df;
+  padding: 30px;
   text-align: center;
-  padding: 20px;
-  background: #fff;
-}
-
-.footer-links {
-  display: flex;
-  gap: 12px;
-  justify-content: center;
-  flex-wrap: wrap;
-}
-
-.social i {
-  font-size: 22px;
-  margin: 10px;
-  color: #555;
 }
