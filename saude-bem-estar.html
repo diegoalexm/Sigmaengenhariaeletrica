@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Saúde e Bem-Estar | Bella e Dellicada</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+<!-- Cabeçalho -->
+<header class="header">
+  <a href="index.html">
+    <img src="img/logo.png" class="logo" alt="Bella e Dellicada">
+  </a>
+  <h1 class="page-title">Saúde e Bem-Estar</h1>
+</header>
+
+<!-- Produtos da categoria -->
+<section class="products-grid" id="category-products"></section>
+
+<!-- Rodapé -->
+<footer>
+  <p>© 2026 Bella e Dellicada</p>
+</footer>
+
+<script>
+// Carrega produtos do JSON
+fetch('products.json')
+  .then(res => res.json())
+  .then(data => {
+    const container = document.getElementById('category-products');
+
+    data.products
+      .filter(p => p.category === 'saude-bem-estar')
+      .forEach(p => {
+        container.innerHTML += `
+          <div class="product-card">
+            <img src="${p.images[0]}">
+            <h4>${p.name}</h4>
+            <a href="products.html?id=${p.id}">Ver detalhes</a>
+          </div>
+        `;
+      });
+  });
+</script>
+
+</body>
+</html>

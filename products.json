@@ -2,20 +2,21 @@
   "products": [
     {
       "id": "monjarim",
-      "name": "Monjarim",
+      "name": "Monjarim - O Poder do Monjaro em Cápsulas",
       "category": "saude-bem-estar",
       "highlight": true,
+      "description": "Monjarim é um suplemento avançado desenvolvido para auxiliar na queima de gordura, redução de medidas e controle do apetite, sem comprometer a massa muscular.",
       "images": [
-        "img/saude-bem-estar/Monj01.jpg",
-        "img/saude-bem-estar/Monj02.jpg",
-        "img/saude-bem-estar/Monj03.jpg",
-        "img/saude-bem-estar/Monj04.jpg"
+        "img/products/saude-bem-estar/Monj01.jpg",
+        "img/products/saude-bem-estar/Monj02.jpg",
+        "img/products/saude-bem-estar/Monj03.jpg",
+        "img/products/saude-bem-estar/Monj04.jpg"
       ],
-      "treatments": [
-        { "label": "1 mês", "link": "https://ev.braip.com/ref?pl=pla1qrk8&ck=chew4mj1&af=afi6595eep" },
-        { "label": "3 meses", "link": "https://ev.braip.com/ref?pl=plarzq9w&ck=chew4mj1&af=afi6595eep" },
-        { "label": "5 meses", "link": "https://ev.braip.com/ref?pl=plaooq9j&ck=chew4mj1&af=afi6595eep" },
-        { "label": "10 meses", "link": "https://ev.braip.com/ref?pl=plak8rl2&ck=chew4mj1&af=afi6595eep" }
+      "links": [
+        { "label": "1 mês", "url": "https://ev.braip.com/ref?pl=pla1qrk8&ck=chew4mj1&af=afi6595eep" },
+        { "label": "3 meses", "url": "https://ev.braip.com/ref?pl=plarzq9w&ck=chew4mj1&af=afi6595eep" },
+        { "label": "5 meses", "url": "https://ev.braip.com/ref?pl=plaooq9j&ck=chew4mj1&af=afi6595eep" },
+        { "label": "10 meses", "url": "https://ev.braip.com/ref?pl=plak8rl2&ck=chew4mj1&af=afi6595eep" }
       ]
     }
   ]

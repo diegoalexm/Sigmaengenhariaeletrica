@@ -2,37 +2,13 @@
 <html lang="pt-br">
 <head>
   <meta charset="UTF-8">
-  <title>Produtos | Bella e Dellicada</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Produto | Bella e Dellicada</title>
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
-<header>
-  <a href="index.html">
-    <img src="img/logo.png" class="logo">
-  </a>
-</header>
+<div id="product-detail"></div>
 
-<h1>Todos os Produtos</h1>
-
-<div class="products" id="all-products"></div>
-
-<script>
-fetch('products.json')
-  .then(res => res.json())
-  .then(data => {
-    data.products.forEach(p => {
-      document.getElementById('all-products').innerHTML += `
-        <div class="product-card">
-          <img src="${p.image}">
-          <h3>${p.name}</h3>
-          <a href="${p.link}" target="_blank">Comprar</a>
-        </div>
-      `;
-    });
-  });
-</script>
-
+<script src="js/main.js"></script>
 </body>
 </html>
