@@ -1,34 +1,48 @@
-// Carrega o arquivo products.json
+// Carrega o JSON de produtos
 fetch('products.json')
-  .then(response => response.json())
+  .then(res => res.json())
   .then(data => {
 
-    // Loop em todos os produtos
-    data.products.forEach(product => {
+    // Renderiza produtos destacados (highlight = true)
+    const highlights = document.getElementById('highlights');
+    if (highlights) {
+      data.products
+        .filter(p => p.highlight)
+        .forEach(p => {
+          highlights.innerHTML += `
+            <div class="product-card">
+              <img src="${p.images[0]}">
+              <h4>${p.name}</h4>
+              <a href="products.html?id=${p.id}">Ver detalhes</a>
+            </div>
+          `;
+        });
+    }
 
-      // Cria o card do produto
-      const card = document.createElement('div');
-      card.className = 'product-card';
+    // P?gina de detalhes do produto
+    const params = new URLSearchParams(window.location.search);
+    const productId = params.get('id');
 
-      // Imagem principal
-      card.innerHTML = `
-        <img src="${product.images[0]}" alt="${product.name}">
-        <h3>${product.name}</h3>
-        <a href="page/product.html?id=${product.id}">Ver detalhes</a>
-      `;
+    if (productId) {
+      const product = data.products.find(p => p.id === productId);
+      const container = document.getElementById('product-detail');
 
-      // Exibe nos destaques se highlight = true
-      if (product.highlight) {
-        document.getElementById('featured-products').appendChild(card);
+      if (product) {
+        container.innerHTML = `
+          <h1>${product.name}</h1>
+          <div class="gallery">
+            ${product.images.map(img => `<img src="${img}">`).join('')}
+          </div>
+          <p>${product.description}</p>
+          <div class="buy-links">
+            ${product.links.map(l => `<a href="${l.url}" target="_blank">${l.label}</a>`).join('')}
+          </div>
+        `;
       }
+    }
+  });
 
-      // Exibe na categoria correta
-      const categoryContainer = document.getElementById(product.category);
-      if (categoryContainer) {
-        categoryContainer.appendChild(card.cloneNode(true));
-      }
-
-    });
-
-  })
-  .catch(error => console.error('Erro ao carregar produtos:', error));
+// Salva lead sem redirecionar
+function saveLead() {
+  document.getElementById('leadMsg').innerText = 'Cadastrado com sucesso ?';
+}
