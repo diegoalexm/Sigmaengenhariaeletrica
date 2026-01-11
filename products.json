@@ -11,18 +11,24 @@
       "id": "monjarim",
       "name": "Monjarim",
       "category": "saude-bem-estar",
-      "platform": "Braip",
-      "highlight": true,
+      "featured": true,
       "images": [
         "img/products/saude-bem-estar/Monj01.jpg",
         "img/products/saude-bem-estar/Monj02.jpg",
-        "img/products/saude-bem-estar/Monj03.jpg"
+        "img/products/saude-bem-estar/Monj03.jpg",
+        "img/products/saude-bem-estar/Monj04.jpg",
+        "img/products/saude-bem-estar/Monj05.jpg",
+        "img/products/saude-bem-estar/Monj06.jpg",
+        "img/products/saude-bem-estar/Monj07.jpg",
+        "img/products/saude-bem-estar/Monj08.jpg",
+        "img/products/saude-bem-estar/Monj09.jpg"
       ],
-      "treatments": [
-        { "label": "1 mês", "link": "https://ev.braip.com/ref?pl=pla1qrk8&ck=chew4mj1&af=afi6595eep" },
-        { "label": "3 meses", "link": "https://ev.braip.com/ref?pl=plarzq9w&ck=chew4mj1&af=afi6595eep" },
-        { "label": "5 meses", "link": "https://ev.braip.com/ref?pl=plaooq9j&ck=chew4mj1&af=afi6595eep" },
-        { "label": "10 meses", "link": "https://ev.braip.com/ref?pl=plak8rl2&ck=chew4mj1&af=afi6595eep" }
+      "description": "Tratamento natural avançado para redução de medidas.",
+      "links": [
+        { "label": "1 mês", "url": "https://ev.braip.com/ref?pl=pla1qrk8&ck=chew4mj1&af=afi6595eep" },
+        { "label": "3 meses", "url": "https://ev.braip.com/ref?pl=plarzq9w&ck=chew4mj1&af=afi6595eep" },
+        { "label": "5 meses", "url": "https://ev.braip.com/ref?pl=plaooq9j&ck=chew4mj1&af=afi6595eep" },
+        { "label": "10 meses", "url": "https://ev.braip.com/ref?pl=plak8rl2&ck=chew4mj1&af=afi6595eep" }
       ]
     }
   ]

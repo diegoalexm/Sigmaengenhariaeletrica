@@ -11,19 +11,16 @@
       w[l]=w[l]||[];
       w[l].push({'gtm.start': new Date().getTime(),event:'gtm.js'});
       var f=d.getElementsByTagName(s)[0],
-      j=d.createElement(s), dl=l!='dataLayer'?'&l='+l:'';
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';
       j.async=true;
       j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;
       f.parentNode.insertBefore(j,f);
     })(window,document,'script','dataLayer','GTM-WT4MG45L');
   </script>
 
-  <!-- Font Awesome (ícones) -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-
-  <!-- CSS -->
   <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
 
 <!-- Google Tag Manager (noscript) -->
@@ -32,61 +29,55 @@
   height="0" width="0" style="display:none;visibility:hidden"></iframe>
 </noscript>
 
-<!-- Cabeçalho -->
-<header class="header">
+<header>
   <img src="img/logo.png" class="logo" alt="Bella e Dellicada">
   <h1 class="headline">Beleza, cuidado e descobertas para você</h1>
 </header>
 
-<!-- Descobertas Deslumbrantes -->
-<section class="section">
-  <h2>✨ Descobertas Deslumbrantes</h2>
-  <div id="featured-products" class="grid"></div>
-</section>
+<!-- Busca -->
+<input type="text" id="search" placeholder="Buscar produtos...">
 
-<!-- Categorias -->
-<section class="section">
-  <h2>Categorias</h2>
-  <div id="categories" class="grid"></div>
-</section>
+<!-- Descobertas Deslumbrantes -->
+<section id="featured"></section>
+
+<!-- Categorias (somente imagem + nome) -->
+<section id="categories"></section>
 
 <!-- Newsletter -->
 <section class="newsletter">
-  <h3>Receba ofertas exclusivas 🥰</h3>
-  <form id="leadForm">
-    <input type="email" name="email" placeholder="Seu email">
-    <input type="text" name="whatsapp" placeholder="Seu WhatsApp">
-    <button type="submit">Cadastrar</button>
-    <p id="leadMessage"></p>
-  </form>
+  <h2>Receba ofertas exclusivas</h2>
+  <input type="email" id="leadEmail" placeholder="Seu email">
+  <input type="text" id="leadWhats" placeholder="Seu WhatsApp">
+  <button onclick="saveLead()">Quero receber</button>
+  <p id="leadMsg"></p>
 </section>
 
 <!-- WhatsApp flutuante -->
-<a href="https://wa.me/5554999877518" class="whatsapp-float" target="_blank">
-  <i class="fab fa-whatsapp"></i>
-</a>
+<a href="https://wa.me/5554999877518" class="whatsapp-float" target="_blank">💬</a>
 
-<!-- Rodapé -->
 <footer>
-  <div class="footer-links">
+  <nav class="footer-links">
     <a href="page/about.html">Quem somos</a>
-    <a href="page/privacy.html">Política de Privacidade</a>
+    <a href="page/privacy.html">Privacidade</a>
     <a href="page/guarantee.html">Garantia</a>
-    <a href="page/returns.html">Trocas e Devoluções</a>
-    <a href="page/shipping.html">Frete e Entrega</a>
-    <a href="page/payment.html">Forma de Pagamento</a>
-    <a href="page/contact.html">Central de Atendimento</a>
-  </div>
+    <a href="page/returns.html">Trocas</a>
+    <a href="page/contact.html">Atendimento</a>
+    <a href="page/shipping.html">Frete</a>
+    <a href="page/payment.html">Pagamento</a>
+  </nav>
 
   <div class="social">
-    <a href="https://instagram.com/bellaeellicada" target="_blank"><i class="fab fa-instagram"></i></a>
-    <a href="https://tiktok.com/@bellaeellicada_" target="_blank"><i class="fab fa-tiktok"></i></a>
+    <a href="https://instagram.com" target="_blank">
+      <img src="img/icons/instagram.svg">
+    </a>
+    <a href="https://tiktok.com" target="_blank">
+      <img src="img/icons/tiktok.svg">
+    </a>
   </div>
 
-  <p>Email: bellaedellicada@gmail.com</p>
+  <p>&copy; 2026 Bella e Dellicada</p>
 </footer>
 
-<!-- JS -->
 <script src="js/main.js"></script>
 </body>
 </html>
