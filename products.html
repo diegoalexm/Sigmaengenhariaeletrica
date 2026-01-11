@@ -3,33 +3,48 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Produto - Bella e Dellicada</title>
+  <title>Produtos - Bella e Dellicada</title>
   <link rel="stylesheet" href="css/style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
 </head>
 <body>
-
 <header>
   <img src="img/logo.png" alt="Bella e Dellicada" class="logo">
 </header>
 
-<main class="product-page">
-  <div class="product-images" id="product-images"></div>
-  <div class="product-info">
-    <h2 id="product-name"></h2>
-    <p id="product-description"></p>
-    <div id="product-treatments"></div>
-    <a id="product-link" class="btn-buy" target="_blank">Quero conhecer</a>
-  </div>
-</main>
+<main id="product-list"></main>
 
 <footer>
   <p>&copy; 2026 Bella e Dellicada</p>
+  <p>Email: <a href="mailto:bellaedellicada@gmail.com">bellaedellicada@gmail.com</a></p>
 </footer>
 
-<a href="https://wa.me/5554999877518" class="whatsapp-float" target="_blank">
-  <img src="icons/whatsapp.png" alt="WhatsApp">
-</a>
+<script>
+const params = new URLSearchParams(window.location.search);
+const categoryId = params.get('category');
 
-<script src="js/main.js"></script>
+fetch('products.json')
+  .then(res => res.json())
+  .then(data => {
+    const main = document.getElementById('product-list');
+    const categoryProducts = data.products.filter(p => p.category === categoryId);
+
+    categoryProducts.forEach(p => {
+      const div = document.createElement('div');
+      div.className = 'product-detail';
+      div.innerHTML = `
+        <div class="product-images">
+          ${p.images.map(img => `<img src="${img}" alt="${p.title}">`).join('')}
+        </div>
+        <div class="product-info">
+          <h2>${p.title}</h2>
+          <p>${p.description}</p>
+          ${p.link ? `<a href="${p.link}" class="btn">Quero conhecer</a>` : ''}
+        </div>
+      `;
+      main.appendChild(div);
+    });
+  });
+</script>
 </body>
 </html>
