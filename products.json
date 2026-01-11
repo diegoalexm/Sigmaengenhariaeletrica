@@ -1,17 +1,10 @@
 {
-  "categories": [
-    { "id": "saude-bem-estar", "name": "Saúde e Bem-estar" },
-    { "id": "perfumes-divinos", "name": "Perfumes Divinos" },
-    { "id": "skincare-maravilhosos", "name": "Skincare Maravilhosos" },
-    { "id": "super-techs", "name": "Super Techs" }
-  ],
-
   "products": [
     {
       "id": "monjarim",
-      "name": "Monjarim",
+      "name": "Monjarim – O Poder do Monjaro em Cápsulas",
       "category": "saude-bem-estar",
-      "featured": true,
+      "highlight": true,
       "images": [
         "img/products/saude-bem-estar/Monj01.jpg",
         "img/products/saude-bem-estar/Monj02.jpg",
@@ -23,12 +16,46 @@
         "img/products/saude-bem-estar/Monj08.jpg",
         "img/products/saude-bem-estar/Monj09.jpg"
       ],
-      "description": "Tratamento natural avançado para redução de medidas.",
+      "description": "Monjarim é uma fórmula avançada desenvolvida para auxiliar na queima de gordura, redução de medidas e controle do apetite, sem comprometer a massa muscular.",
       "links": [
-        { "label": "1 mês", "url": "https://ev.braip.com/ref?pl=pla1qrk8&ck=chew4mj1&af=afi6595eep" },
-        { "label": "3 meses", "url": "https://ev.braip.com/ref?pl=plarzq9w&ck=chew4mj1&af=afi6595eep" },
-        { "label": "5 meses", "url": "https://ev.braip.com/ref?pl=plaooq9j&ck=chew4mj1&af=afi6595eep" },
-        { "label": "10 meses", "url": "https://ev.braip.com/ref?pl=plak8rl2&ck=chew4mj1&af=afi6595eep" }
+        { "label": "1 mês de tratamento", "url": "https://ev.braip.com/ref?pl=pla1qrk8&ck=chew4mj1&af=afi6595eep" },
+        { "label": "3 meses de tratamento", "url": "https://ev.braip.com/ref?pl=plarzq9w&ck=chew4mj1&af=afi6595eep" },
+        { "label": "5 meses de tratamento", "url": "https://ev.braip.com/ref?pl=plaooq9j&ck=chew4mj1&af=afi6595eep" },
+        { "label": "10 meses de tratamento", "url": "https://ev.braip.com/ref?pl=plak8rl2&ck=chew4mj1&af=afi6595eep" }
+      ]
+    },
+
+    {
+      "id": "perfume-lancome",
+      "name": "Lancôme La Vie Est Belle Rosa Extraordinária",
+      "category": "perfumes-divinos",
+      "highlight": true,
+      "images": [
+        "img/products/perfumes-divinos/Per01.jpg",
+        "img/products/perfumes-divinos/Per02.jpg",
+        "img/products/perfumes-divinos/Per03.jpg",
+        "img/products/perfumes-divinos/Per04.jpg"
+      ],
+      "description": "Uma fragrância floral sofisticada que celebra a feminilidade e a liberdade de ser extraordinariamente você.",
+      "links": [
+        { "label": "Comprar agora", "url": "https://mercadolivre.com/sec/1hLXCcJ" }
+      ]
+    },
+
+    {
+      "id": "skincare-lancome",
+      "name": "Creme para Olhos Lancôme Barrier Night",
+      "category": "skincare-maravilhosos",
+      "highlight": false,
+      "images": [
+        "img/products/skincare-maravilhosos/Skin01.jpg",
+        "img/products/skincare-maravilhosos/Skin02.jpg",
+        "img/products/skincare-maravilhosos/Skin03.jpg",
+        "img/products/skincare-maravilhosos/Skin04.jpg"
+      ],
+      "description": "Tratamento noturno antienvelhecimento que revitaliza a pele e suaviza sinais do tempo.",
+      "links": [
+        { "label": "Comprar agora", "url": "https://mercadolivre.com/sec/2LMw37W" }
       ]
     }
   ]

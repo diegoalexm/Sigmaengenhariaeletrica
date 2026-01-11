@@ -2,14 +2,128 @@
 <html lang="pt-br">
 <head>
   <meta charset="UTF-8">
-  <title>Produtos</title>
+  <title>Produto | Bella e Dellicada</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- CSS principal -->
   <link rel="stylesheet" href="css/style.css">
+
+  <!-- Font Awesome (?cones redes / bot?es) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
+
 <body>
 
-<h1 id="categoryTitle"></h1>
-<section id="productList"></section>
+<!-- HEADER -->
+<header class="header">
+  <a href="index.html">
+    <img src="img/logo.png" alt="Bella e Dellicada" class="logo">
+  </a>
+</header>
 
-<script src="js/main.js"></script>
+<!-- CONTAINER DO PRODUTO -->
+<main class="product-page">
+
+  <!-- GALERIA / CARROSSEL -->
+  <section class="product-gallery">
+    <img id="mainImage" src="" alt="Produto" class="main-image">
+
+    <div id="thumbs" class="thumbs"></div>
+  </section>
+
+  <!-- INFORMA??ES -->
+  <section class="product-info">
+    <h1 id="productName"></h1>
+
+    <p id="productDescription" class="description"></p>
+
+    <!-- BOT?ES DE COMPRA -->
+    <div id="buyButtons" class="buy-buttons"></div>
+  </section>
+
+</main>
+
+<!-- FOOTER -->
+<footer>
+  <nav class="footer-links">
+    <a href="page/about.html">Quem somos</a>
+    <a href="page/privacy.html">Pol?tica de Privacidade</a>
+    <a href="page/returns.html">Trocas e Devolu??es</a>
+    <a href="page/guarantee.html">Garantia</a>
+    <a href="page/shipping.html">Frete e Entrega</a>
+    <a href="page/payment.html">Forma de Pagamento</a>
+    <a href="page/contact.html">Central de Atendimento</a>
+  </nav>
+
+  <div class="social">
+    <a href="https://instagram.com/bellaeellicada" target="_blank">
+      <i class="fab fa-instagram"></i>
+    </a>
+    <a href="https://tiktok.com/@bellaeellicada_" target="_blank">
+      <i class="fab fa-tiktok"></i>
+    </a>
+  </div>
+
+  <p>Email: bellaedellicada@gmail.com</p>
+</footer>
+
+<!-- JS -->
+<script>
+/* =========================
+   L?GICA DA P?GINA DE PRODUTO
+   ========================= */
+
+// Captura par?metros da URL (?id=monjarim)
+const params = new URLSearchParams(window.location.search);
+const productId = params.get('id');
+
+// Busca os produtos no JSON
+fetch('products.json')
+  .then(response => response.json())
+  .then(data => {
+
+    // Encontra o produto correto
+    const product = data.products.find(p => p.id === productId);
+
+    // Se n?o encontrar, evita p?gina quebrada
+    if (!product) {
+      document.body.innerHTML = '<p style="text-align:center">Produto n?o encontrado</p>';
+      return;
+    }
+
+    /* ===== Nome e descri??o ===== */
+    document.getElementById('productName').innerText = product.name;
+    document.getElementById('productDescription').innerText = product.description;
+
+    /* ===== Galeria de imagens ===== */
+    const mainImage = document.getElementById('mainImage');
+    const thumbs = document.getElementById('thumbs');
+
+    // Define imagem principal
+    mainImage.src = product.images[0];
+
+    // Miniaturas
+    product.images.forEach(img => {
+      const thumb = document.createElement('img');
+      thumb.src = img;
+      thumb.className = 'thumb';
+      thumb.onclick = () => mainImage.src = img;
+      thumbs.appendChild(thumb);
+    });
+
+    /* ===== Bot?es de compra ===== */
+    const buyButtons = document.getElementById('buyButtons');
+
+    product.links.forEach(link => {
+      const btn = document.createElement('a');
+      btn.href = link.url;
+      btn.target = '_blank';
+      btn.className = 'buy-btn';
+      btn.innerText = link.label;
+      buyButtons.appendChild(btn);
+    });
+  });
+</script>
+
 </body>
 </html>
