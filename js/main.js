@@ -1,76 +1,47 @@
-// Carregar categorias
-fetch('products.json')
-  .then(res => res.json())
-  .then(data => {
-    const categoriesContainer = document.querySelector('.categories');
-    data.categories.forEach(cat => {
-      const catDiv = document.createElement('div');
-      catDiv.classList.add('category');
-      catDiv.innerHTML = `
-        <a href="products.html?category=${cat.id}">
-          <img src="${cat.image}" alt="${cat.name}">
-          <h3>${cat.name}</h3>
-        </a>
+// Arquivo: js/main.js
+
+document.addEventListener("DOMContentLoaded", () => {
+  // WhatsApp flutuante
+  const whatsapp = document.querySelector(".whatsapp-float");
+  whatsapp.style.position = "fixed";
+  whatsapp.style.bottom = "20px";
+  whatsapp.style.right = "20px";
+  whatsapp.style.zIndex = "1000";
+
+  // Carregar categorias na header
+  const headerNav = document.querySelector(".header-categories");
+  if(headerNav){
+    categories.forEach(cat => {
+      const a = document.createElement("a");
+      a.href = "products.html?category=" + cat.name;
+      a.textContent = cat.title;
+      headerNav.appendChild(a);
+    });
+  }
+
+  // Vitrine descobertas Deslumbrantes
+  const featuresContainer = document.getElementById("features");
+  if(featuresContainer){
+    products.filter(p => p.features).forEach(p => {
+      const div = document.createElement("div");
+      div.className = "feature-item";
+      div.innerHTML = `
+        <img src="${p.images[0]}" alt="${p.title}">
+        <h3>${p.title}</h3>
+        <a href="product.html?id=${p.id}" class="btn">Quero conhecer</a>
       `;
-      categoriesContainer.appendChild(catDiv);
+      featuresContainer.appendChild(div);
     });
+  }
 
-    // Descobertas Deslumbrantes
-    const featuredContainer = document.querySelector('.featured-products');
-    data.categories.forEach(cat => {
-      cat.products.forEach(prod => {
-        if(prod.features){
-          const prodDiv = document.createElement('div');
-          prodDiv.classList.add('featured-item');
-          prodDiv.innerHTML = `
-            <img src="${prod.images[0]}" alt="${prod.title}">
-            <h4>${prod.title}</h4>
-            <a href="products.html?product=${prod.id}" class="btn">Quero conhecer</a>
-          `;
-          featuredContainer.appendChild(prodDiv);
-        }
-      });
+  // Leads
+  const leadForm = document.getElementById("leadForm");
+  if(leadForm){
+    leadForm.addEventListener("submit", e => {
+      e.preventDefault();
+      alert("Cadastrado com sucesso ?");
+      leadForm.reset();
+      // Automa??o externa para Google Sheets ou Forms
     });
-  });
-
-// Carregar produtos na products.html
-function loadProducts() {
-  const params = new URLSearchParams(window.location.search);
-  const categoryId = params.get('category');
-  const productId = params.get('product');
-
-  fetch('products.json')
-    .then(res => res.json())
-    .then(data => {
-      const container = document.querySelector('.products-container');
-      container.innerHTML = '';
-      if(categoryId){
-        const cat = data.categories.find(c => c.id === categoryId);
-        cat.products.forEach(prod => renderProduct(prod, container));
-      } else if(productId){
-        data.categories.forEach(cat => {
-          const prod = cat.products.find(p => p.id === productId);
-          if(prod) renderProduct(prod, container);
-        });
-      }
-    });
-}
-
-function renderProduct(prod, container){
-  const prodDiv = document.createElement('div');
-  prodDiv.classList.add('product-item');
-  let imagesHtml = prod.images.map(img => `<img src="${img}" alt="${prod.title}">`).join('');
-  prodDiv.innerHTML = `
-    <div class="product-images">${imagesHtml}</div>
-    <div class="product-info">
-      <h2>${prod.title}</h2>
-      <p>${prod.description}</p>
-      <a href="${prod.link}" target="_blank" class="btn">Comprar</a>
-    </div>
-  `;
-  container.appendChild(prodDiv);
-}
-
-if(document.querySelector('.products-container')){
-  loadProducts();
-}
+  }
+});
