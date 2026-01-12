@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Produtos - Bella e Dellicada</title>
+<title>Produto - Bella e Dellicada</title>
 <link rel="stylesheet" href="css/style.css">
 <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
 </head>
@@ -13,7 +13,7 @@
   <nav class="header-categories"></nav>
 </header>
 
-<main id="products-list"></main>
+<main id="product-detail" style="display:flex; gap:20px; padding:20px;"></main>
 
 <footer>
   <div class="social">
@@ -30,19 +30,33 @@
 <script src="js/products.js"></script>
 <script>
 const urlParams = new URLSearchParams(window.location.search);
-const cat = urlParams.get("category");
-const container = document.getElementById("products-list");
+const pid = urlParams.get("id");
+const product = products.find(p => p.id === pid);
+const container = document.getElementById("product-detail");
 
-products.filter(p => p.category === cat).forEach(p => {
-  const div = document.createElement("div");
-  div.className = "feature-item";
-  div.innerHTML = `
-    <img src="${p.images[0]}" alt="${p.title}">
-    <h3>${p.title}</h3>
-    <a href="product.html?id=${p.id}" class="btn">Ver Produto</a>
+if(product){
+  const imagesDiv = document.createElement("div");
+  imagesDiv.style.flex = "1";
+  product.images.forEach(img => {
+    const im = document.createElement("img");
+    im.src = img;
+    im.style.width = "200px";
+    im.style.display = "block";
+    im.style.marginBottom = "10px";
+    imagesDiv.appendChild(im);
+  });
+
+  const infoDiv = document.createElement("div");
+  infoDiv.style.flex = "2";
+  infoDiv.innerHTML = `
+    <h2>${product.title}</h2>
+    <p>${product.description}</p>
+    <a href="${product.link}" class="btn">Quero conhecer</a>
   `;
-  container.appendChild(div);
-});
+
+  container.appendChild(imagesDiv);
+  container.appendChild(infoDiv);
+}
 </script>
 </body>
 </html>
