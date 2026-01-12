@@ -4,59 +4,25 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Produto - Bella e Dellicada</title>
-<link rel="stylesheet" href="css/style.css">
-<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../css/style.css">
+<script src="../js/products.js"></script>
 </head>
 <body>
 <header>
-  <img src="img/logo.png" alt="Bella e Dellicada" class="logo">
-  <nav class="header-categories"></nav>
+  <img src="../img/logo.png" alt="Bella e Dellicada" class="logo">
 </header>
-
-<main id="product-detail" style="display:flex; gap:20px; padding:20px;"></main>
-
-<footer>
-  <div class="social">
-    <a href="https://instagram.com/bellaeellicada" target="_blank">
-      <img src="https://cdn-icons-png.flaticon.com/512/174/174855.png" alt="Instagram" class="social-icon">
-    </a>
-    <a href="https://tiktok.com/@bellaeellicada_" target="_blank">
-      <img src="https://cdn-icons-png.flaticon.com/512/3046/3046121.png" alt="TikTok" class="social-icon">
-    </a>
+<main style="display:flex; gap:20px; padding:30px;">
+  <div id="product-images" style="flex:1;"></div>
+  <div>
+    <h1 id="product-title"></h1>
+    <p id="product-desc"></p>
+    <a id="buy-link" class="btn" target="_blank">Quero conhecer</a>
   </div>
-  <a href="institucional.html" class="institucional-link">Institucional</a>
-</footer>
-
-<script src="js/products.js"></script>
+</main>
 <script>
-const urlParams = new URLSearchParams(window.location.search);
-const pid = urlParams.get("id");
-const product = products.find(p => p.id === pid);
-const container = document.getElementById("product-detail");
-
-if(product){
-  const imagesDiv = document.createElement("div");
-  imagesDiv.style.flex = "1";
-  product.images.forEach(img => {
-    const im = document.createElement("img");
-    im.src = img;
-    im.style.width = "200px";
-    im.style.display = "block";
-    im.style.marginBottom = "10px";
-    imagesDiv.appendChild(im);
-  });
-
-  const infoDiv = document.createElement("div");
-  infoDiv.style.flex = "2";
-  infoDiv.innerHTML = `
-    <h2>${product.title}</h2>
-    <p>${product.description}</p>
-    <a href="${product.link}" class="btn">Quero conhecer</a>
-  `;
-
-  container.appendChild(imagesDiv);
-  container.appendChild(infoDiv);
-}
+document.addEventListener("DOMContentLoaded", function() {
+  loadProduct();
+});
 </script>
 </body>
 </html>

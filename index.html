@@ -1,90 +1,75 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Bella e Dellicada</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bella e Dellicada</title>
 
-<!-- Google Tag Manager -->
-<script>
-(function(w,d,s,l,i){
-  w[l]=w[l]||[];
-  w[l].push({'gtm.start': new Date().getTime(),event:'gtm.js'});
-  var f=d.getElementsByTagName(s)[0],
-  j=d.createElement(s), dl=l!='dataLayer'?'&l='+l:'';
-  j.async=true;
-  j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;
-  f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GTM-WT4MG45L');
-</script>
-<!-- End Google Tag Manager -->
+  <!-- Google Tag Manager -->
+  <script>
+    (function(w,d,s,l,i){
+      w[l]=w[l]||[];
+      w[l].push({'gtm.start': new Date().getTime(),event:'gtm.js'});
+      var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s), dl=l!='dataLayer'?'&l='+l:'';
+      j.async=true;
+      j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;
+      f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-WT4MG45L');
+  </script>
 
-<!-- CSS -->
-<link rel="stylesheet" href="css/style.css">
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/style.css">
 
-<!-- Fontes -->
-<link href="https://fonts.googleapis.com/css2?family=Italianno&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+  <!-- Fontes -->
+  <link href="https://fonts.googleapis.com/css2?family=Italianno&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
 </head>
 <body>
 
 <!-- Google Tag Manager (noscript) -->
 <noscript>
-<iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WT4MG45L" height="0" width="0" style="display:none;visibility:hidden"></iframe>
+  <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WT4MG45L"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe>
 </noscript>
 
-<!-- WhatsApp flutuante -->
+<!-- WhatsApp Flutuante -->
 <a href="https://wa.me/5554999877518" target="_blank" class="whatsapp-float">
   <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp">
 </a>
 
-<!-- Header -->
-<header class="header">
+<!-- Cabe?alho -->
+<header>
   <img src="img/logo.png" alt="Bella e Dellicada" class="logo">
-  <nav class="nav-categories">
-    <a href="#saude-bem-estar">Sa?de Bem Estar</a>
-    <a href="#perfumes-divinos">Perfumes Divinos</a>
-    <a href="#skincare-maravilhosos">Skincare Maravilhosos</a>
-  </nav>
 </header>
 
-<!-- Banner / Descobertas Deslumbrantes -->
-<section class="vitrine">
-  <h2 class="vitrine-title">Descobertas Deslumbrantes</h2>
-  <div class="vitrine-items" id="vitrine-items">
-    <!-- Produtos com features=true ser?o injetados aqui pelo JS -->
-  </div>
+<!-- Descobertas Deslumbrantes -->
+<section class="features-section">
+  <h2 class="section-title">Descobertas Deslumbrantes</h2>
+  <div id="features-container" class="product-grid"></div>
 </section>
 
 <!-- Categorias -->
-<section class="categories">
-  <h2 class="categories-title">Categorias</h2>
-  <div class="categories-items" id="categories-items">
-    <!-- Categorias injetadas pelo JS -->
-  </div>
+<section class="categories-section">
+  <h2 class="section-title">Categorias</h2>
+  <div id="categories-container" class="category-grid"></div>
 </section>
 
-<!-- Footer -->
-<footer class="footer">
-  <div class="footer-social">
+<!-- Rodap? -->
+<footer>
+  <div class="social">
     <a href="https://instagram.com/bellaeellicada" target="_blank">
-      <img src="https://cdn-icons-png.flaticon.com/512/1384/1384063.png" alt="Instagram">
+      <img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="Instagram">
     </a>
     <a href="https://tiktok.com/@bellaeellicada_" target="_blank">
       <img src="https://cdn-icons-png.flaticon.com/512/3046/3046121.png" alt="TikTok">
     </a>
   </div>
-  <div class="footer-institucional">
-    <a href="institucional.html" class="institucional-link">Institucional</a>
-  </div>
-  <div class="footer-seguranca">
-    <img src="https://cdn-icons-png.flaticon.com/512/2985/2985150.png" alt="SSL">
-    <img src="https://cdn-icons-png.flaticon.com/512/4494/4494495.png" alt="Cloudflare">
-  </div>
+  <a href="page/institutional.html" class="institutional-link">Institucional</a>
   <p>&copy; 2026 Bella e Dellicada</p>
 </footer>
 
 <!-- JS -->
+<script src="js/products.js"></script>
 <script src="js/main.js"></script>
-<script src="products.js"></script>
 </body>
 </html>
