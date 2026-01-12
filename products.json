@@ -1,72 +1,29 @@
-{
-  "categories": [
-    {
-      "id": "saude-bem-estar",
-      "name": "Saúde Bem-Estar",
-      "image": "img/products/saude-bem-estar/saude-bem-estar.jpg",
-      "products": [
-        {
-          "id": "monj01",
-          "title": "Monjarim - O PODER DO MONJARO EM CÁPSULAS",
-          "description": "Monjarim ajuda a desinchar, reduzir medidas, eliminar a vontade de comer doce e perder peso dormindo. Fórmula segura com garantia de satisfação 90 dias.",
-          "images": [
-            "img/products/saude-bem-estar/Monj01.jpg",
-            "img/products/saude-bem-estar/Monj02.jpg",
-            "img/products/saude-bem-estar/Monj03.jpg",
-            "img/products/saude-bem-estar/Monj04.jpg",
-            "img/products/saude-bem-estar/Monj05.jpg",
-            "img/products/saude-bem-estar/Monj06.jpg",
-            "img/products/saude-bem-estar/Monj07.jpg",
-            "img/products/saude-bem-estar/Monj08.jpg",
-            "img/products/saude-bem-estar/Monj09.jpg"
-          ],
-          "price": "",
-          "link": "https://ev.braip.com/ref?pl=pla1qrk8&ck=chew4mj1&af=afi6595eep",
-          "features": true
-        }
-      ]
-    },
-    {
-      "id": "perfumes-divinos",
-      "name": "Perfumes Divinos",
-      "image": "img/products/perfumes-divinos/perfumes-divinos.jpg",
-      "products": [
-        {
-          "id": "per01",
-          "title": "Perfume Lancôme La Vie Est Belle Rosa Extraordinária EDP 100ml",
-          "description": "Perfume floral, livre de crueldade. País de origem: França. Com notas de rosa, bergamota, íris e gourmand. Uma fragrância sofisticada e elegante.",
-          "images": [
-            "img/products/perfumes-divinos/Per01.jpg",
-            "img/products/perfumes-divinos/Per02.jpg",
-            "img/products/perfumes-divinos/Per03.jpg",
-            "img/products/perfumes-divinos/Per04.jpg"
-          ],
-          "price": "",
-          "link": "https://mercadolivre.com/sec/1hLXCcJ",
-          "features": true
-        }
-      ]
-    },
-    {
-      "id": "skincare-maravilhosos",
-      "name": "Skincare Maravilhosos",
-      "image": "img/products/skincare-maravilhosos/skincare-maravilhosos.jpg",
-      "products": [
-        {
-          "id": "skin01",
-          "title": "Creme para Olhos Lancôme Barrier Night 50ml",
-          "description": "Creme noturno antienvelhecimento, indicado para todos os tipos de pele. Pele rejuvenescida e revitalizada com toque aveludado.",
-          "images": [
-            "img/products/skincare-maravilhosos/Skin01.jpg",
-            "img/products/skincare-maravilhosos/Skin02.jpg",
-            "img/products/skincare-maravilhosos/Skin03.jpg",
-            "img/products/skincare-maravilhosos/Skin04.jpg"
-          ],
-          "price": "",
-          "link": "https://mercadolivre.com/sec/2LMw37W",
-          "features": true
-        }
-      ]
-    }
-  ]
-}
+[
+  {
+    "id": 1,
+    "title": "Perfume Lancôme La Vie Est Belle Rosa Extraordinária EDP 100ml",
+    "category": "perfumes-divinos",
+    "images": ["img/products/perfumes-divinos/Per01.jpg","img/products/perfumes-divinos/Per02.jpg","img/products/perfumes-divinos/Per03.jpg","img/products/perfumes-divinos/Per04.jpg"],
+    "description": "Perfume floral, livre de crueldade, França. Trio de rosas: água de rosas, rosa absoluta e rosa do espaço.",
+    "link": "https://mercadolivre.com/sec/1hLXCcJ",
+    "features": true
+  },
+  {
+    "id": 2,
+    "title": "Creme para Olhos Lancôme Barrier Night 50ml",
+    "category": "skincare-maravilhosos",
+    "images": ["img/products/skincare-maravilhosos/Skin01.jpg","img/products/skincare-maravilhosos/Skin02.jpg","img/products/skincare-maravilhosos/Skin03.jpg","img/products/skincare-maravilhosos/Skin04.jpg"],
+    "description": "Creme antienvelhecimento noturno. Indicado para todos os tipos de pele, 30+. Rejuvenesce e revitaliza a pele.",
+    "link": "https://mercadolivre.com/sec/2LMw37W",
+    "features": true
+  },
+  {
+    "id": 3,
+    "title": "Monjarim - O PODER DO MONJARO EM CÁPSULAS",
+    "category": "saude-bem-estar",
+    "images": ["img/products/saude-bem-estar/Monj01.jpg","img/products/saude-bem-estar/Monj02.jpg","img/products/saude-bem-estar/Monj03.jpg","img/products/saude-bem-estar/Monj04.jpg","img/products/saude-bem-estar/Monj05.jpg","img/products/saude-bem-estar/Monj06.jpg","img/products/saude-bem-estar/Monj07.jpg","img/products/saude-bem-estar/Monj08.jpg","img/products/saude-bem-estar/Monj09.jpg"],
+    "description": "Monjarim auxilia na perda de gordura, redução de medidas, inibidor de apetite e combate ao inchaço.",
+    "link": "https://ev.braip.com/ref?pl=pla1qrk8&ck=chew4mj1&af=afi6595eep",
+    "features": true
+  }
+]
