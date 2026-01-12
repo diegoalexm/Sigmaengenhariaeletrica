@@ -1,74 +1,42 @@
-// Arquivo: js/products.js
+// product.html e category.html usam este JS
+function getQueryParam(param) {
+  const urlParams = new URLSearchParams(window.location.search);
+  return urlParams.get(param);
+}
 
-const categories = [
-  {
-    name: "saude-bem-estar",
-    title: "Saúde e Bem-estar",
-    img: "img/products/saude-bem-estar/saude-bem-estar.jpg"
-  },
-  {
-    name: "perfumes-divinos",
-    title: "Perfumes Divinos",
-    img: "img/products/perfumes-divinos/perfumes-divinos.jpg"
-  },
-  {
-    name: "skincare-maravilhosos",
-    title: "Skincare Maravilhosos",
-    img: "img/products/skincare-maravilhosos/skincare-maravilhosos.jpg"
-  }
-];
+async function loadProduct() {
+  const id = getQueryParam("id");
+  const data = await fetch("../products.json").then(res => res.json());
+  const product = data.find(p => p.id === id);
+  if (!product) return;
+  
+  document.getElementById("product-title").textContent = product.title;
+  document.getElementById("product-desc").textContent = product.description;
 
-const products = [
-  // Saúde e Bem-estar
-  {
-    id: "monj01",
-    category: "saude-bem-estar",
-    title: "Monjarim - O PODER DO MONJARO EM CÁPSULAS",
-    description: "Monjarim ajuda a reduzir medidas, eliminar inchaço e controlar a vontade de doces.",
-    features: true,
-    images: [
-      "img/products/saude-bem-estar/Monj01.jpg",
-      "img/products/saude-bem-estar/Monj02.jpg",
-      "img/products/saude-bem-estar/Monj03.jpg",
-      "img/products/saude-bem-estar/Monj04.jpg",
-      "img/products/saude-bem-estar/Monj05.jpg",
-      "img/products/saude-bem-estar/Monj06.jpg",
-      "img/products/saude-bem-estar/Monj07.jpg",
-      "img/products/saude-bem-estar/Monj08.jpg",
-      "img/products/saude-bem-estar/Monj09.jpg"
-    ],
-    link: "https://ev.braip.com/ref?pl=pla1qrk8&ck=chew4mj1&af=afi6595eep"
-  },
+  const imgContainer = document.getElementById("product-images");
+  product.images.forEach(img => {
+    const image = document.createElement("img");
+    image.src = `../img/products/${product.category}/${img}`;
+    imgContainer.appendChild(image);
+  });
 
-  // Perfumes
-  {
-    id: "perf01",
-    category: "perfumes-divinos",
-    title: "Perfume Lancôme La Vie Est Belle Rosa Extraordinária EDP 100ml",
-    description: "Fragrância floral, livre de crueldade, notas de rosa e bergamota.",
-    features: true,
-    images: [
-      "img/products/perfumes-divinos/Perf01.jpg",
-      "img/products/perfumes-divinos/Perf02.jpg",
-      "img/products/perfumes-divinos/Perf03.jpg",
-      "img/products/perfumes-divinos/Perf04.jpg"
-    ],
-    link: "https://mercadolivre.com/sec/1hLXCcJ"
-  },
+  document.getElementById("buy-link").href = product.link;
+}
 
-  // Skincare
-  {
-    id: "skin01",
-    category: "skincare-maravilhosos",
-    title: "Creme para Olhos Lancôme Barrier Night 50ml",
-    description: "Creme antienvelhecimento para aplicação noturna, pele rejuvenescida e revitalizada.",
-    features: true,
-    images: [
-      "img/products/skincare-maravilhosos/Skin01.jpg",
-      "img/products/skincare-maravilhosos/Skin02.jpg",
-      "img/products/skincare-maravilhosos/Skin03.jpg",
-      "img/products/skincare-maravilhosos/Skin04.jpg"
-    ],
-    link: "https://mercadolivre.com/sec/2LMw37W"
-  }
-];
+async function loadCategory() {
+  const category = getQueryParam("category");
+  const data = await fetch("../products.json").then(res => res.json());
+  const catProducts = data.filter(p => p.category === category);
+
+  const container = document.getElementById("category-products");
+  catProducts.forEach(prod => {
+    const div = document.createElement("div");
+    div.classList.add("product-card");
+    div.innerHTML = `
+      <img src="../img/products/${prod.category}/${prod.images[0]}" alt="${prod.title}">
+      <h3>${prod.title}</h3>
+      <a href="product.html?id=${prod.id}" class="btn">Quero conhecer</a>
+    `;
+    container.appendChild(div);
+  });
+}
