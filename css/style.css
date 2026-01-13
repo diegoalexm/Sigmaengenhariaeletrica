@@ -1,6 +1,1 @@
-
-body { background:#F6E7E7; font-family:Roboto; }
-.section-title{font-family:Italianno; font-size:3rem; color:#D99393;}
-.grid-products{display:grid; gap:20px;}
-.card-product{background:#fff; padding:10px; border-radius:10px;}
-.btn{background:#D99393; padding:10px; border-radius:8px; color:#fff; text-decoration:none;}
+body{background:#F6E7E7;font-family:Roboto;} .section-title{font-family:Italianno;font-size:3rem;color:#D99393;} .grid{display:grid;gap:16px;} .grid-products{grid-template-columns:repeat(auto-fill,minmax(160px,1fr));} .card-product{background:#fff;padding:10px;border-radius:10px;} .btn{background:#D99393;color:#fff;padding:10px;border-radius:8px;text-decoration:none;}
