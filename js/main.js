@@ -1,5 +1,1 @@
-
-// main.js completo com comentários
-// Renderiza menu e utilitários
-function renderCategoriesMenu(){const c=document.querySelector('.menu-categorias');if(!c)return;c.innerHTML=categories.map(cat=>`<a href='category.html?c=${cat.id}'>${cat.name}</a>`).join('');}
-document.addEventListener('DOMContentLoaded',renderCategoriesMenu);
+function getParam(n){return new URLSearchParams(location.search).get(n);} function renderCategoriesMenu(){const el=document.querySelector('.menu-categorias');if(!el)return;el.innerHTML=categories.map(c=>`<a href='category.html?c=${c.id}'>${c.name}</a>`).join('');} document.addEventListener('DOMContentLoaded',()=>{renderCategoriesMenu(); const y=document.getElementById('year'); if(y) y.textContent=new Date().getFullYear();});
