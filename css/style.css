@@ -1,95 +1,67 @@
 
 /* --------------------------------------------------
-   Bella e Dellicada — Tema Premium Rosé
-   Paleta: Rosé #D99393 | Nude #F6E7E7 | Branco #FFFFFF | Cinza #6B6B6B
-   Tipos: Italianno (títulos), Roboto (texto)
+   Bella e Dellicada — SPA Premium Rosé
 ---------------------------------------------------*/
-:root{
-  --rose:#D99393;
-  --rose-600:#C77E7E;
-  --nude:#F6E7E7;
-  --text:#3A3A3A;
-  --muted:#6B6B6B;
-  --white:#FFF;
-  --radius:14px;
-  --shadow:0 10px 25px rgba(0,0,0,.06);
-}
+:root{ --rose:#D99393; --rose-600:#C77E7E; --nude:#F6E7E7; --text:#3A3A3A; --muted:#6B6B6B; --white:#FFF; --radius:14px; --shadow:0 10px 25px rgba(0,0,0,.06) }
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
-body{
-  margin:0; background:var(--nude); color:var(--text);
-  font-family: "Roboto", system-ui, -apple-system, Segoe UI, Arial, sans-serif;
-  line-height:1.5;
-}
+body{ margin:0; background:var(--nude); color:var(--text); font-family:"Roboto", system-ui, -apple-system, Segoe UI, Arial, sans-serif; line-height:1.5 }
 
-/* Tipografia */
-h1,h2,h3,.script{font-family:"Italianno", cursive; font-weight:400; color:var(--rose)}
-.section-title{font-size:3rem; margin:24px auto 8px; text-align:center}
+h1,h2,h3,.script{ font-family:"Italianno", cursive; font-weight:400; color:var(--rose) }
+.section-title{ font-size:3rem; margin:24px auto 8px; text-align:center }
 
-/* Header */
-.header{
-  position:sticky; top:0; z-index:50;
-  background:linear-gradient(#F3E3E3,#F6E7E7);
-  padding:10px 16px; box-shadow:0 2px 15px rgba(0,0,0,.05);
-}
-.logo{height:42px; display:block; margin:0 auto}
+.header{ position:sticky; top:0; z-index:50; background:linear-gradient(#F3E3E3,#F6E7E7); padding:10px 16px; box-shadow:0 2px 15px rgba(0,0,0,.05) }
+.brand{ display:flex; align-items:center; gap:10px; justify-content:center }
+.logo{ height:42px }
+.brand-text{ font-family:"Italianno"; font-size:2rem; color:var(--rose) }
 
-/* Menu categorias */
-.menu-categorias{display:flex; gap:12px; justify-content:center; flex-wrap:wrap; margin:10px auto 0}
-.menu-categorias .menu-link,
-.menu-categorias a{color:var(--rose-600); text-decoration:none; font-weight:500; background:rgba(217,147,147,.12); padding:8px 12px; border-radius:999px; border:1px solid rgba(217,147,147,.2)}
-.menu-categorias a:hover{background:rgba(217,147,147,.2)}
+.menu-categorias{ display:flex; gap:12px; justify-content:center; flex-wrap:wrap; margin:10px auto 0 }
+.menu-categorias a{ color:var(--rose-600); text-decoration:none; font-weight:500; background:rgba(217,147,147,.12); padding:8px 12px; border-radius:999px; border:1px solid rgba(217,147,147,.2) }
+.menu-categorias a:hover{ background:rgba(217,147,147,.2) }
 
-/* Containers */
-.container{max-width:1100px; margin:0 auto; padding:12px 16px}
+.container{ max-width:1100px; margin:0 auto; padding:12px 16px }
+.grid{ display:grid; gap:16px }
+.grid-products{ grid-template-columns:repeat(2,1fr) }
+@media(min-width:760px){ .grid-products{ grid-template-columns:repeat(3,1fr) } }
+@media(min-width:1040px){ .grid-products{ grid-template-columns:repeat(4,1fr) } }
 
-/* Grids */
-.grid{display:grid; gap:16px}
-.grid-products{grid-template-columns:repeat(2,1fr)}
-@media(min-width:760px){.grid-products{grid-template-columns:repeat(3,1fr)}}
-@media(min-width:1040px){.grid-products{grid-template-columns:repeat(4,1fr)}}
+.card-product{ background:var(--white); border-radius:var(--radius); overflow:hidden; box-shadow:var(--shadow); display:flex; flex-direction:column }
+.card-product .card-img-wrap{ display:block; aspect-ratio:1/1; overflow:hidden; background:#fff }
+.card-product img{ width:100%; height:100%; object-fit:cover; display:block; transition:transform .35s ease }
+.card-product:hover img{ transform:scale(1.04) }
+.card-product .card-body{ padding:12px }
+.card-title{ font-size:1rem; margin:0 0 10px; color:#333 }
 
-/* Card de produto (home/categoria) */
-.card-product{background:var(--white); border-radius:var(--radius); overflow:hidden; box-shadow:var(--shadow); display:flex; flex-direction:column}
-.card-product .card-img-wrap{display:block; aspect-ratio:1/1; overflow:hidden; background:#fff}
-.card-product img{width:100%; height:100%; object-fit:cover; display:block; transition:transform .35s ease}
-.card-product:hover img{transform:scale(1.04)}
-.card-product .card-body{padding:12px}
-.card-title{font-size:1rem; margin:0 0 10px; color:#333}
+.btn{ display:inline-block; text-decoration:none; cursor:pointer; border:0; font-weight:600 }
+.btn-rose{ background:var(--rose); color:#fff; padding:10px 14px; border-radius:10px }
+.btn-rose:hover{ background:#c37a7a }
+.btn-large{ padding:14px 18px; font-size:1rem }
 
-/* Botões */
-.btn{display:inline-block; text-decoration:none; cursor:pointer; border:0; font-weight:600}
-.btn-rose{background:var(--rose); color:#fff; padding:10px 14px; border-radius:10px}
-.btn-rose:hover{background:#c37a7a}
-.btn-large{padding:14px 18px; font-size:1rem}
+.category-banner img{ width:100%; height:auto; border-radius:var(--radius); box-shadow:var(--shadow); display:block }
+.category-title{ text-align:center; font-size:2.6rem; margin:18px 0 }
 
-/* Category */
-.category-banner img{width:100%; height:auto; border-radius:var(--radius); box-shadow:var(--shadow); display:block}
-.category-title{text-align:center; font-size:2.6rem; margin:18px 0}
+.product-layout{ display:grid; gap:18px; align-items:start; grid-template-columns:100% }
+@media(min-width:980px){ .product-layout{ grid-template-columns:160px 1fr 1fr } }
+.product-thumbs{ display:flex; gap:10px; overflow:auto }
+@media(min-width:980px){ .product-thumbs{ flex-direction:column; max-height:520px } }
+.thumb{ padding:0; border:0; background:transparent; cursor:pointer; border-radius:10px; overflow:hidden }
+.thumb img{ width:90px; height:90px; object-fit:cover; display:block; border-radius:10px; box-shadow:var(--shadow) }
+.product-hero .product-main{ background:var(--white); border-radius:var(--radius); box-shadow:var(--shadow); overflow:hidden }
+.product-hero .product-main img{ width:100%; height:auto; display:block }
+.product-details{ background:var(--white); border-radius:var(--radius); box-shadow:var(--shadow); padding:16px }
+.product-title{ font-size:2.2rem; margin:0 0 6px }
+.product-description{ color:#444 }
+.product-ctas{ display:flex; gap:10px; flex-wrap:wrap; margin-top:14px }
 
-/* Página de produto */
-.product-layout{display:grid; gap:18px; align-items:start; grid-template-columns:100%}
-@media(min-width:980px){.product-layout{grid-template-columns:160px 1fr 1fr}}
-.product-gallery{position:relative}
-.product-thumbs{display:flex; gap:10px; overflow:auto}
-@media(min-width:980px){.product-thumbs{flex-direction:column; max-height:520px}}
-.thumb{padding:0; border:0; background:transparent; cursor:pointer; border-radius:10px; overflow:hidden}
-.thumb img{width:90px; height:90px; object-fit:cover; display:block; border-radius:10px; box-shadow:var(--shadow)}
-.product-hero .product-main{background:var(--white); border-radius:var(--radius); box-shadow:var(--shadow); overflow:hidden}
-.product-hero .product-main img{width:100%; height:auto; display:block}
-.product-details{background:var(--white); border-radius:var(--radius); box-shadow:var(--shadow); padding:16px}
-.product-title{font-size:2.2rem; margin:0 0 6px}
-.product-description{color:#444}
-.product-ctas{display:flex; gap:10px; flex-wrap:wrap; margin-top:14px}
+.footer{ padding:20px 16px 40px; text-align:center }
+.footer .social{ display:flex; gap:16px; justify-content:center; align-items:center; margin:10px 0 }
+.footer .social img{ width:28px; height:28px; display:block; filter:saturate(.95) }
+.footer .institucional-link{ display:block; margin:8px auto; color:#555; text-decoration:none }
+.footer .selos{ display:flex; gap:10px; justify-content:center; align-items:center; margin-top:6px }
+.footer .selos img{ height:22px; opacity:.9 }
+.footer-copy{ margin-top:8px; color:#7a7a7a; font-size:.9rem }
 
-/* Rodapé */
-.footer{padding:20px 16px 40px; text-align:center}
-.footer .social{display:flex; gap:16px; justify-content:center; align-items:center; margin:10px 0}
-.footer .social img{width:28px; height:28px; display:block; filter:saturate(.95)}
-.footer .institucional-link{display:block; margin:8px auto; color:#555; text-decoration:none}
-.footer .selos{display:flex; gap:10px; justify-content:center; align-items:center; margin-top:6px}
-.footer .selos img{height:22px; opacity:.9}
-.footer-copy{margin-top:8px; color:#7a7a7a; font-size:.9rem}
+.muted{ color:var(--muted); font-size:.95rem }
 
-/* Utilitários */
-.muted{color:var(--muted); font-size:.95rem}
+.whatsapp-float{ position:fixed; right:16px; bottom:16px; z-index:60 }
+.whatsapp-float img{ width:44px; height:44px }
