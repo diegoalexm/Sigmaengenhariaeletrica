@@ -5,7 +5,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="Bella e Dellicada — curadoria elegante de perfumes, skincare e bem‑estar. Produtos originais e links seguros." />
-  <title>Bella e Dellicada — Descobertas Deslumbrantes</title>
+  <title>Bella e Dellicada — Vitrine Premium</title>
 
   <!-- Google Tag Manager -->
   <script>
@@ -29,17 +29,22 @@
   <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WT4MG45L" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <!-- End Google Tag Manager (noscript) -->
 
+  <!-- WhatsApp flutuante -->
+  <a href="https://wa.me/5554999877518" target="_blank" class="whatsapp-float" aria-label="Fale no WhatsApp">
+    <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp">
+  </a>
+
   <!-- Header -->
   <header class="header">
-    <img src="img/logo.png" alt="Bella e Dellicada" class="logo" />
+    <div class="brand">
+      <img src="img/logo.png" alt="Bella e Dellicada" class="logo" onerror="this.style.display='none'" />
+      <div class="brand-text" aria-hidden="true">Bella e Dellicada</div>
+    </div>
     <nav class="menu-categorias" aria-label="Categorias"></nav>
   </header>
 
-  <!-- Conteúdo principal -->
-  <main class="container">
-    <h1 class="section-title">Descobertas Deslumbrantes</h1>
-    <section id="showcase-grid" class="grid grid-products" aria-live="polite"></section>
-  </main>
+  <!-- SPA container -->
+  <main id="app" class="container" aria-live="polite"></main>
 
   <!-- Rodapé -->
   <footer class="footer">
@@ -52,7 +57,7 @@
       </a>
     </div>
 
-    <a href="institucional.html" class="institucional-link">Institucional</a>
+    <a href="#/institucional" class="institucional-link">Institucional</a>
 
     <div class="selos">
       <img src="https://img.icons8.com/fluency/48/ssl-certificate.png" alt="SSL" />
@@ -63,8 +68,6 @@
     <p class="footer-copy">&copy; <span id="year"></span> Bella e Dellicada</p>
   </footer>
 
-  <script src="js/products.js"></script>
-  <script src="js/main.js"></script>
-  <script src="js/render-home.js"></script>
+  <script src="js/app.js"></script>
 </body>
 </html>
