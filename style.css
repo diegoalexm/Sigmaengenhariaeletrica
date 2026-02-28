@@ -110,7 +110,7 @@ section {
 
 .logo-parceiro:hover {
     opacity: 1;
-    transform: scale(0.7);
+    transform: scale(0.5);
 }
 .card {
     background: #1e293b;
