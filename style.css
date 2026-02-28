@@ -102,15 +102,10 @@ section {
     margin-top: 30px;
 }
 .logo-parceiro {
-    width: 60px;
+    width: 70px;
+    max-width: 100%;
     height: auto;
-    opacity: 0.8;
-    transition: 0.3s ease;
-}
-
-.logo-parceiro:hover {
-    opacity: 1;
-    transform: scale(0.3);
+    object-fit: contain;
 }
 .card {
     background: #1e293b;
@@ -132,7 +127,7 @@ iframe {
 /* BOTAO WHATSAPP */
 .whatsapp-float {
     position: fixed;
-    bottom: 20px;
+    bottom:px;
     right: 20px;
     z-index: 1000;
     transition: 0.3s;
