@@ -169,6 +169,28 @@ iframe {
 }
 
 footer {
+    /* SELOS DE SEGURANCA */
+.selos {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+    margin-top: 15px;
+}
+
+.selo {
+    border: 1px solid #00bcd4;
+    color: #00bcd4;
+    padding: 6px 12px;
+    font-size: 12px;
+    border-radius: 20px;
+    background: rgba(0, 188, 212, 0.1);
+}
+    .ssl {
+    border: 1px solid #4CAF50;
+    color: #4CAF50;
+    background: rgba(76, 175, 80, 0.1);
+    }
     background: #0b1120;
     padding: 30px 5%;
     text-align: center;
