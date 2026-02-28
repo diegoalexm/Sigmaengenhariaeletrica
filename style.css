@@ -103,7 +103,7 @@ section {
 }
 .logo-parceiro {
     width: 30px;
-    max-width: 100%;
+    max-width: 70%;
     height: auto;
     object-fit: contain;
 }
