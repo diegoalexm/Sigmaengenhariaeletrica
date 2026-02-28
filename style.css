@@ -45,6 +45,26 @@ section {
     min-height: 100vh;
 }
 
+/* HERO COM IMAGEM */
+.hero {
+    background: url('bg.jpg') center center/cover no-repeat;
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,0.65);
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+}
+
 .hero h2 {
     font-size: 40px;
     margin-bottom: 20px;
@@ -53,10 +73,6 @@ section {
 .hero p {
     font-size: 18px;
     margin-bottom: 30px;
-}
-
-.buttons {
-    margin-top: 20px;
 }
 
 .btn {
@@ -101,6 +117,32 @@ iframe {
     width: 100%;
     height: 300px;
     border-radius: 8px;
+}
+
+/* BOTAO WHATSAPP */
+.whatsapp-float {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
+    transition: 0.3s;
+}
+
+.whatsapp-float:hover {
+    transform: scale(1.1);
+}
+
+/* BOTAO INSTAGRAM */
+.instagram-float {
+    position: fixed;
+    bottom: 90px;
+    right: 22px;
+    z-index: 1000;
+    transition: 0.3s;
+}
+
+.instagram-float:hover {
+    transform: scale(1.1);
 }
 
 footer {
