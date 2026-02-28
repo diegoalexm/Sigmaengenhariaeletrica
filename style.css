@@ -75,7 +75,7 @@ section {
     margin-bottom: 30px;
 }
 
-.btn {
+/*.btn {
     display: inline-block;
     padding: 14px 28px;
     margin: 10px;
@@ -95,7 +95,25 @@ section {
     box-shadow: 0 12px 25px rgba(0, 0, 0, 0.3);
     background: linear-gradient(135deg, #1f3c48, #2c5364, #3a7bd5);
 }
+*/
+.btn {
+    display: inline-block;
+    padding: 14px 30px;
+    margin: 10px;
+    font-size: 15px;
+    font-weight: 600;
+    text-decoration: none;
+    color: white;
+    border-radius: 50px;
+    background: #111;
+    border: 2px solid #00bcd4;
+    transition: 0.3s;
+}
 
+.btn:hover {
+    background: #00bcd4;
+    color: #111;
+}
 .services, .videos {
     background: #111827;
 }
