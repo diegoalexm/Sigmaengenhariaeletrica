@@ -101,7 +101,17 @@ section {
     gap: 20px;
     margin-top: 30px;
 }
+.logo-parceiro {
+    width: 60px;
+    height: auto;
+    opacity: 0.8;
+    transition: 0.3s ease;
+}
 
+.logo-parceiro:hover {
+    opacity: 1;
+    transform: scale(1.05);
+}
 .card {
     background: #1e293b;
     padding: 20px;
