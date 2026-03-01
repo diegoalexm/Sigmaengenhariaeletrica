@@ -187,6 +187,33 @@ footer {
     opacity: 1;
     transform: scale(1.05);
 }
+    /* RODAPE – SELITOS DE CREDENCIAMENTO */
+.credenciais-img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+    margin-top: 20px;
+    flex-wrap: wrap;
+}
+
+.selo-item {
+    text-align: center;
+    font-size: 13px;
+    color: #555;
+}
+
+.selo-item img {
+    width: 45px;
+    margin-bottom: 5px;
+    opacity: 0.85;
+    transition: 0.3s;
+}
+
+.selo-item img:hover {
+    opacity: 1;
+    transform: scale(1.1);
+}
     background: #0b1120;
     padding: 30px 5%;
     text-align: center;
