@@ -169,28 +169,24 @@ iframe {
 }
 
 footer {
-    /* SELOS DE SEGURANCA */
-.selos {
+.selos-img {
     display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
     justify-content: center;
+    gap: 15px;
     margin-top: 15px;
 }
 
-.selo {
-    border: 1px solid #00bcd4;
-    color: #00bcd4;
-    padding: 6px 12px;
-    font-size: 12px;
-    border-radius: 20px;
-    background: rgba(0, 188, 212, 0.1);
+.selos-img img {
+    width: 45px;
+    height: auto;
+    opacity: 0.9;
+    transition: 0.3s;
 }
-    .ssl {
-    border: 1px solid #4CAF50;
-    color: #4CAF50;
-    background: rgba(76, 175, 80, 0.1);
-    }
+
+.selos-img img:hover {
+    opacity: 1;
+    transform: scale(1.05);
+}
     background: #0b1120;
     padding: 30px 5%;
     text-align: center;
